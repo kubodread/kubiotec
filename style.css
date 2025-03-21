@@ -158,8 +158,15 @@ button {
     flex-direction: column;
 }
 
+.p1{
+    font-style: italic;
+    font-size: 20px;
+    color: #1f2937;
+}
+
 .p2 {
     text-align: right;
+    font-weight: 900;
     
 }
 
