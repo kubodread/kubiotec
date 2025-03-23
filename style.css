@@ -85,6 +85,31 @@
         font-size: 6px;
     }
 
+    .ulproductos {
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0;
+        padding: 1px 1px;
+
+    }
+    
+    li.liproductos{
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        border: none;
+        width: auto;
+        padding: 0 15px;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 14px;
+        margin: 0 0;
+    }
+
+
+
+
     a {
         text-decoration: none;
         color:#e5e7eb;
@@ -172,6 +197,18 @@ button.botonheader {
         align-items: start;
     }
 
+    .imgtextproductos {
+        display: flex;
+        flex-direction: column;
+        border: 3px;
+        border-color: #3882f6;
+        padding-top: 5px;
+        justify-content: space-between;
+        gap: 3px;
+        align-items: start;
+    }
+
+
     .figt {
         display: flex;
         width: 350px;
@@ -188,13 +225,30 @@ button.botonheader {
     
 
     }
+    img.balimglogo{
+        width: auto;
+        height: 250px;
+    }
 
+    .figtproductos img{
+        padding-top: 20px;
+        width: 250px;
+        height: auto;
+    }
+
+    .figtproductos img
     .figt img {
         border-radius: .61em;
     }
     .textf {
         text-align: justify;
         font-size: 15px;
+    }
+
+    .textfproductos {
+        text-align: justify;
+        font-size: 15px;
+        padding: 0 25px 0 25px;
     }
 
     button {
@@ -259,6 +313,14 @@ button.botonheader {
         border-radius: 5px;
     }
 
+  .cuadrofinproductos {
+   
+    background-color: rgb(53, 53, 53);
+        display: flex;
+        height: auto;
+        border-radius: 10px;
+        flex-direction: column;
+    }
 
     .textcuadro{
         display: flex;
@@ -278,7 +340,7 @@ button.botonheader {
     .cuadrofinb{
         display: flex;
         flex-direction: column;
-        width: 80px;
+        width: auto;
         height: 35px;
         border: 1px solid #f9faf8;
         border-radius: 6px;
@@ -286,6 +348,11 @@ button.botonheader {
         justify-content: center;
         margin: 10px 0 10px 0;
     }
+
+    #imgfin {
+        border-radius: 20px;
+    }
+
   }
 
 
@@ -393,7 +460,7 @@ button.botonheader {
         width: 160px;
         height: 160px;
         margin:30px;
-
+        border-radius: 10px;
     }
 
     #imgheaderbio {
@@ -425,6 +492,18 @@ button.botonheader {
         align-items: start;
     }
 
+    .imgtextproductos {
+        display: flex;
+        border: 3px;
+        border-color: #3882f6;
+        padding-top: 20px;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
     .figt {
         display: flex;
         width: 230px;
@@ -434,6 +513,16 @@ button.botonheader {
         align-items: center;
         
     }
+    .figtproductos {
+        display: flex;
+        width: auto;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+
 
     img {
         width: 230px;
@@ -446,10 +535,40 @@ button.botonheader {
         border: 3px solid #3882f6;
         border-radius: .61em;
     }
+    .figtproductos img  {
+        border: 3px solid #3882f6;
+        border-radius: .61em;
+        width: auto;
+        height: 230px;
+    
+    }
+
     .textf {
         text-align: center;
         font-size: 15px;
     }
+
+    .textfproductos {
+        background-color: rgba(211, 211, 211, 0.432);
+        text-align: justify;
+        font-size: 15px;
+        width: auto;
+        height: 230px;
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+
+    .ulproductos {
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .liproductos {
+        list-style-type: circle;
+        border: 1px solid;
+        padding: 0 5px;
+    }
+
 
     button {
         background-color: #3882f6;
@@ -503,6 +622,18 @@ button.botonheader {
         align-items: center;
         border-radius: 5px;
     }
+    .cuadrofinproductos {
+        margin: 65px 10px;
+        border: 2px;
+        background-color: #3882f6;
+        padding: 20px 80px 20px 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+
 .contenidofin.cuadrofin{
     padding-left: 20px;
     padding-right: 20px;
@@ -519,7 +650,7 @@ button.botonheader {
         display: flex;
         align-items: center;
         width: auto;
-        height: 20px;
+        height: auto;
         border: 1px solid #f9faf8;
         border-radius: 6px;
     }
