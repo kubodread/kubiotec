@@ -1,4 +1,4 @@
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
     * {
         box-sizing: border-box;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -68,7 +68,7 @@
         gap: 1px;
         padding: 1px;
         margin: 1px;
-        font-size: 6px;
+        font-size: 12px;
 
     }
 
@@ -157,17 +157,25 @@
     }
 
     #imgheaderbio {
-        width: 180px;
-        height: 180px;
+        width: 280px;
+        height: auto;
         margin:3px;
         border-radius: 10px;
         margin-bottom: 10px;
     }
 
-button.botonheader {
-    display: flex;
-    align-items: center;
-}
+    button.botonheader {
+        display: flex;
+        align-items: center;
+        border: 2px solid;
+        border-radius: 10px;
+    }
+
+    .botonheader {
+        background-color: #abc937;
+        color: #1F2937;
+    }
+
 
     .contenido1 h2 {
         display: flex;
@@ -222,7 +230,7 @@ button.botonheader {
     img {
         width: 350px;
         height: 350px;
-    
+        border-radius: 10px;
 
     }
     img.balimglogo{
@@ -254,7 +262,7 @@ button.botonheader {
     button {
         background-color: #3882f6;
         border-radius: .4em;
-        border-color:#3882f6;
+        border-color:#000000;
         color:#f9faf8;
     }
 
@@ -320,6 +328,8 @@ button.botonheader {
         height: auto;
         border-radius: 10px;
         flex-direction: column;
+        align-items: center;
+
     }
 
     .textcuadro{
@@ -348,6 +358,23 @@ button.botonheader {
         justify-content: center;
         margin: 10px 0 10px 0;
     }
+    .cuadrofinbproductos{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 35px;
+        margin: 1px solid #000000;
+        border-radius: 6px;
+        font-weight: 600;
+        justify-content: center;
+        margin: 10px 0 10px 0;
+        align-items: center;
+        background-color: #abc937;
+        color: #1F2937;
+    
+    }
+
+
 
     #imgfin {
         border-radius: 20px;
@@ -356,7 +383,7 @@ button.botonheader {
   }
 
 
-@media only screen and (min-width: 961px) {
+@media only screen and (min-width:601px) {
 
     * {
         box-sizing: border-box;
