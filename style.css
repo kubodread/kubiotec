@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 999px) {
     * {
         box-sizing: border-box;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -148,6 +148,11 @@
         padding: 10px;
     }
 
+    p.pamigosp {
+        padding: 5px;
+        margin: 0;
+    }
+
     #imgheader {
         width: 180px;
         height: 180px;
@@ -205,6 +210,29 @@
         align-items: start;
     }
 
+    .directorio {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: flex-start;
+        padding: 0;
+        border-radius: 9px;
+    }
+    .directorioli {
+        display: flex;
+        background-color: #3882f6;
+        width: auto;
+        padding: 3px;
+        margin: 3px;
+        font-size: 10px;
+        color: #000000;
+        border: none ;
+    }
+
+    a.amigosli{
+        font-size: 12px;
+    }
+
     .imgtextproductos {
         display: flex;
         flex-direction: column;
@@ -216,7 +244,7 @@
         align-items: start;
     }
 
-
+    
     .figt {
         display: flex;
         width: 350px;
@@ -258,6 +286,37 @@
         font-size: 15px;
         padding: 0 25px 0 25px;
     }
+
+    .figtproductosamigos {
+        background-color: rgba(211, 211, 211, 0.432);
+        display: flex;
+        width: auto;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .textfproductosamigos {
+        background-color: rgba(211, 211, 211, 0.432);
+        text-align: justify;
+        font-size: 15px;
+        width: auto;
+        height: auto;
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+
+    .listaamigos {
+        box-sizing: content-box;
+        display: flex;
+        width: auto;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 5px 5px 5px 5px;
+        font-size: 14px;
+    }
+
 
     button {
         background-color: #3882f6;
@@ -324,13 +383,18 @@
     .contactw {
         display: flex;
         align-content: center;
-        align-items: center;
+        align-items: flex-end;
        }
     
 
     #whatsappn {
         width: auto;
-        height: 20px;
+        height: 25px;
+    }
+
+    #insta {
+        width: auto;
+        height: 45px;
     }
 
 
@@ -408,10 +472,24 @@
         align-content: center;
     }
 
+.pag404 {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: 400px;
+        padding-top:100px;
+        
+    }
+
+
   }
 
 
-@media only screen and (min-width:601px) {
+@media only screen and (min-width:1001px) {
 
     * {
         box-sizing: border-box;
@@ -497,7 +575,7 @@
         flex-direction: row;
         padding-left: 100px;
         align-items: center;
-        padding-bottom: 80px;
+        padding-bottom: 30px;
     }
     .headertexto {
         text-align: left;
@@ -547,6 +625,28 @@
         align-items: start;
     }
 
+
+    .directorio {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-content: flex-start;
+        padding: 0;
+    }
+    .directorioli {
+        display: flex;
+        background-color: #3882f6;
+        border-radius: 9px;
+        width: auto;
+        padding: 3px;
+        margin: 3px;
+        font-size: 16px;
+        color: #000000;
+        border: none ;
+    }
+
+
+
     .imgtextproductos {
         display: flex;
         border: 3px;
@@ -578,6 +678,18 @@
         align-items: center;
         
     }
+
+    .figtproductosamigos {
+        background-color: rgba(211, 211, 211, 0.432);
+        display: flex;
+        width: auto;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+  
 
 
     img {
@@ -614,6 +726,17 @@
         padding-left: 5px;
     }
 
+    .textfproductosamigos {
+        background-color: rgba(211, 211, 211, 0.432);
+        text-align: justify;
+        font-size: 15px;
+        width: auto;
+        height: auto;
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+
+
     .ulproductos {
         display: flex;
         flex-direction: row;
@@ -632,6 +755,21 @@
         border-color:#3882f6;
         color:#f9faf8;
     }
+
+    .listaamigos {
+        box-sizing: content-box;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px 15px 10px 15px;
+
+    }
+
+    .menu-container {
+        display: flex;
+        flex-direction: row;
+
+    }
+
 
     .contenido2 {
         display: flex;
@@ -659,7 +797,16 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
     }
+
+    .contenidofininfo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
 
     #imgfin {
         display: flex;
@@ -711,6 +858,13 @@
         height: 40px;
     }
 
+    #insta {
+        width: auto;
+        height: 45px;
+    }
+
+
+
 .contenidofin.cuadrofin{
     padding-left: 20px;
     padding-right: 20px;
@@ -737,5 +891,20 @@
         background-color: #1F2937;
         color:#f9faf8;
     }
+
+    .pag404 {
+        display: flex;
+        background-color: #1f2937;
+        color: #e5e7eb;
+        display: flex;
+        flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        width: auto;
+        height: 800px;
+      padding-top: 100px;
+    }
+
+
 
 }
