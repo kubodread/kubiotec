@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kubiotec</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
     <div class="barratop">
@@ -34,6 +35,18 @@
         <img id="imgheader" src="images/lombrizfeliz.jpeg" alt="Lombriz feliz, imagen generada con Bing IA">
     </div>
 <br>
+
+<div id="principaln">
+    <div id="noticiasbarra"></div>    
+    <script>
+        fetch('noticiasbarra/noticias.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('noticiasbarra').innerHTML = data;
+            });
+    </script>
+    
+
 <div id="inicio"></div>    
 <script>
     fetch('inicio.html')
@@ -42,7 +55,7 @@
             document.getElementById('inicio').innerHTML = data;
         });
 </script>
-
+</div>
 
     <div class="contenido1">
         <h2>El desarrollo y la naturaleza van de la mano</h2>
@@ -65,6 +78,9 @@
             </div>
         </div>
     </div>
+
+
+    
     <div class="contenido2">
         <div class="textocont2">
             <p class="p1">El uso de los microorganismos benéficos es amplio, no se limita solo a la nutrición y mejora de la salud de las plantas, se pueden utilizar para acelerar procesos como el compostaje y lombricompostaje. 

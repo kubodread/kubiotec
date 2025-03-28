@@ -1,0 +1,24 @@
+<script>
+    fetch('noticiasbarra/noticias.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('noticiashoy').innerHTML = data;
+        });
+</script>
+
+<div id="noticiashoy"></div>    
+
+<!-- 
+
+<script>
+    fetch('noticiasbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('noticiasbarra').innerHTML = data;
+            fetch('noticiasbarra/noticias.html')
+                .then(response => response.text())
+                .then(noticiasData => {
+                    document.getElementbyId('noticiashoy').innerHTML = noticiasData;
+                });
+        });
+</script> -->
