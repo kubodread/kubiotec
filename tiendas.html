@@ -27,6 +27,22 @@
             <p class="pamigosp">
                 
                 Descubre nuestra red de colaboradores, un grupo de profesionales y negocios comprometidos con el desarrollo sustentable. <br> Aquí encontrarás:
+                
+                <ul class="listaamigos">
+                    <li class="listaamigos">  Productos Artesanales: Artesanos comprometidos con brindar un producto de calidad, productos elaborados con amor y originalidad, entre lo cultural y la modernidad nos deleitan los sentidos.
+                        <ul class="directorio">
+                           <li class="directorioli">
+                    <a class="amigosli" href="#kubyhe">KubyHe Ropa de manta artesanal y moderna</a>
+                            </li>
+                            
+                            <li class="directorioli">
+                                <a  class="amigosli" href=""> Espacio libre </a>
+                            </li>
+                        </ul>
+                
+               
+                
+                
                 <ul class="listaamigos">
                     <li class="listaamigos">  Servicios Multidisciplinarios: Expertos en diversas áreas para apoyar tus proyectos.
                         <ul class="directorio">
@@ -34,7 +50,7 @@
                                 <a  class="amigosli" href="#">Arquitectura y Paisajismo</a>
                             </li>
                             <li class="directorioli">
-                                <a  class="amigosli" href=""> Espacio libre  </a>
+                                <a  class="amigosli" href="#redaccionaca"> Redacción académica  </a>
                             </li>
                             <li class="directorioli">
                                 <a  class="amigosli" href=""> Espacio libre </a>
@@ -44,8 +60,9 @@
                     </li> 
                     <li class="listaamigos">Espacios Verdes: Tiendas, boutiques de plantas y viveros que promueven la vida natural.
                         <ul class="directorio">
+                            
                             <li class="directorioli">
-                                <a class="amigosli" href="#amigos1">Balvina Jardín</a>
+                                <a class="amigosli" href="#balvina">Balvina Jardín</a>
                             </li>
                             <li class="directorioli">
                                 <a class="amigosli" href="">Encantos y Orquideas </a>
@@ -84,29 +101,47 @@
     </div>
     <div class="contenido1">
         <h1> Red de Colaboradores Kubiotec</h1>
+        
+        <div id="kubyhe"></div>    
+        <script>
+            fetch('imgpag/kubyhe.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('kubyhe').innerHTML = data;
+                });
+        </script>
 
-
-
+<br>
 
        <!--  paginas html amigo balvina  -->
-            <div id="amigos1"></div>    
+            <div id="balvina"></div>    
             <script>
                 fetch('imgpag/amigos1.html')
                     .then(response => response.text())
                     .then(data => {
-                        document.getElementById('amigos1').innerHTML = data;
+                        document.getElementById('balvina').innerHTML = data;
                     });
             </script>
 <br>
        <!--  paginas html para incluir amigos  -->
-       <div id="amigos2"></div>    
+       <div id="redaccionaca"></div>    
        <script>
            fetch('imgpag/amigos2.html')
                .then(response => response.text())
                .then(data => {
-                   document.getElementById('amigos2').innerHTML = data;
+                   document.getElementById('redaccionaca').innerHTML = data;
                });
        </script>
+<br>
+<!--  paginas html para incluir amigos  -->
+        <div id="amigos3"></div>    
+        <script>
+            fetch('imgpag/amigos3.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('amigos3').innerHTML = data;
+                });
+        </script>
 
 
     </div>
@@ -125,7 +160,7 @@
                 <p class="pc1">Brindamos asesorías ambientales en  normativas técnicas y legales. </p>
             </div>
             <button class="cuadrofinb">
-                <p><a class="contactw" href="http://wa.me/+522281362858">Contactar <img id="whatsappn" src="images/whatsp.png" alt="" /></a></p>
+                <p><a class="contactw" href="http://wa.me/+522281362858" target="_blank">Contactar <img id="whatsappn" src="images/whatsp.png" alt="" /></a></p>
             </button>
         </div>
     </div>

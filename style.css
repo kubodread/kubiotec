@@ -291,12 +291,22 @@
     img.balimglogo{
         width: auto;
         height: 250px;
+        border-radius: 15px;
     }
 
     img.lombripro{
         width: auto;
         height: 350px;
         border-radius: 10px;
+    }
+
+    .imgkubyhe {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 300px;
+        height: auto;
+        border-radius: 45px;
     }
 
     .figtproductos img{
@@ -798,6 +808,12 @@
         flex-direction: column;
     }
 
+    img.balimglogo{
+        width: auto;
+        height: 250px;
+        border-radius: 15px;
+    }
+
     .figt {
         display: flex;
         width: 230px;
@@ -885,6 +901,15 @@
     
     }
 
+    .imgkubyhe {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 300px;
+        height: auto;
+        border-radius: 45px;
+    }
+
     .textf {
         text-align: center;
         font-size: 15px;
@@ -948,6 +973,14 @@
         flex-wrap: wrap;
         padding: 5px 15px 10px 15px;
 
+    }
+
+    .litutolist{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: flex-start;
+        text-align: justify;
     }
 
     .menu-container {
