@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubiotec ::::: Productos agroecológicos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="barratop">
+         <div class="logoytext">
+            <div class="logotextomovil">  <a href="index.html">
+                <img id="logo" src="images/logokubiotec.png" alt="Logo de Kubiotec">
+                </a><a href="index.html"><p class="logotext">Kubiotec</p></a>
+            </div>
+        <ul class="ultop">
+            <li><a class="ultop" href="Productos.html">Productos</a></li>
+            <li><a class="ultop" href="tutoriales.html">Tutoriales</a></li>
+            <li><a class="ultop" href="kubiotecMX.html">Servicios</a></li>
+        </ul></div>
+    </div>
+    <div class="headergeneral">
+        <div class="headertexto">
+            <h1>Productos agroecológicos Kubiotec</h1>
+            <p>
+                Biosoluciones agroecológicas, te presentamos algunos tutoriales enfocados a la salud y nutrición de las plantas ornamentales, huertos y cultivos productivas,
+                conocer los niveles de pH del suelo de forma casera o con tiras reactivas, uso recomendado de enmiendas o suplementos, la aplicación 
+                y dosificación para el control de plagas como hongos, bacterias e insectos oportunistas que afectan la salud de las plantas entre otros tutoriales de interés y utilidad agroecológica.
+            </p>
+            <button class="botonheader"><a class="botonheader" href="index.html">Inicio</a></button>
+            <button class="botonheader"><a class="botonheader" href="Productos.html">Productos</a></button>
+            <button class="botonheader"><a class="botonheader" href="tiendas.html">Tiendas y Viveros</a></button>
+            <button class="botonheader"><a class="botonheader" href="kubiotecMX.html">Conoce más de nuestros servicios</a></button>
+
+        </div>
+        <img id="imgheaderbio" src="images/preparacion.jpg" alt="Preparando agroecológicos">
+    </div>
+    <div class="contenido1">
+
+        <h2>Algunos tutoriales de interés para la salud del suelo y las plantas</h2>
+       
+         <div id="tutorialeslist"></div>
+       <script>
+            fetch('tutorialeslista.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('tutorialeslist').innerHTML = data;
+                    inicioTuto();
+                });
+        </script>
+
+
+        
+
+    </div>
+    <div class="contenido2">
+        <div class="textocont2">
+            <p class="p1">
+                ¿Necesitas asesoría normativa - técnica ambiental?
+                <br> ¿Necesitas algún taller sobre compostaje a pequeña, mediana y gran escala para la gestión adecuada de los residuos? 
+                <br> ¿Quieres aprender a usar los microorganismos benéficos?  
+                <br> ¿Uso correcto de biosoluciones, preparación de bioinsumos, bocashis acelerados, plaguicidas e insecticidas? 
+                <br> ¿Quieres un diagnostico rápido para conocer la salud de tu suelo?
+            </p>
+            <p class="p2">-Biólogo José Félix Kubota Hernández - Asesor Ambiental. </p>
+        </div>
+    </div>
+    <div class="contenidofin">
+        <img id="imgfin" src="images/kubobal.jpg" alt="aplicación de Bacterias ácido lácticas en PTAR">
+        <div class="cuadrofinproductos">
+            <div class="textcuadro">
+                <p class="pc1">Brindamos asesorías ambientales en  normativas técnicas y legales. </p>
+            </div>
+            <button class="cuadrofinb">
+                <p><a class="contactw" href="http://wa.me/+522281362858">Contactar <img id="whatsappn" src="images/whatsp.png" alt="" /></a></p>
+            </button>
+        </div>
+    </div>
+    <footer>
+        <div class="footercuadro">
+            <p class="textfoot"> Copyright c Kubiotec by The Odin Project 2025</p>
+        </div>
+    </footer>
+
+    <script src="scriptuto.js"></script>
+
+</body>
+</html>

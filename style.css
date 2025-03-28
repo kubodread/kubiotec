@@ -199,6 +199,9 @@
         flex-wrap: wrap;
         flex-direction: column;
     }
+
+
+
     .imgtext {
         display: flex;
         flex-direction: column;
@@ -209,6 +212,9 @@
         gap: 3px;
         align-items: start;
     }
+
+
+
 
     .directorio {
         display: flex;
@@ -255,6 +261,7 @@
         
     }
 
+
     img {
         width: 350px;
         height: 350px;
@@ -264,6 +271,12 @@
     img.balimglogo{
         width: auto;
         height: 250px;
+    }
+
+    img.lombripro{
+        width: auto;
+        height: 350px;
+        border-radius: 10px;
     }
 
     .figtproductos img{
@@ -297,6 +310,46 @@
         align-items: center;
         
     }
+
+    .figtproductoslomb {
+        background-color: rgba(211, 211, 211, 0.432);
+        display: flex;
+        width: auto;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+    }
+
+    #tutorialk{
+        background-color: rgba(211, 211, 211, 0.432);
+        display: flex;
+        width:min-content;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;  
+    }
+
+    .tutorialk {
+        background-color: rgba(211, 211, 211, 0.432);
+        display: flex;
+        width: auto;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;  
+    }
+
+    #tutorialeslist {
+        display: flex;
+        flex-direction: column ;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+
     .textfproductosamigos {
         background-color: rgba(211, 211, 211, 0.432);
         text-align: justify;
@@ -305,6 +358,17 @@
         height: auto;
         padding-right: 10px;
         padding-left: 5px;
+    }
+
+    .textfproductoslomb {
+        background-color: rgba(211, 211, 211, 0.432);
+        text-align: justify;
+        font-size: 15px;
+        width: auto;
+        height: auto;
+        padding-right: 10px;
+        padding-left: 5px;
+        border-radius: 15px;
     }
 
     .listaamigos {
@@ -317,6 +381,29 @@
         font-size: 14px;
     }
 
+    .titulostutos {
+        background-image: linear-gradient(0deg, rgba(179,179,179,1),rgba(140,140,140,.3));
+        margin-bottom: 2px;
+        border: 1px solid rgb(87, 87, 87);
+        border-radius: .4em;
+        margin: 10px 0 10px 0;
+        padding: 20px 0 20px 0;
+        display: flex;
+        width: 350px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .lituto {
+        display: flex;
+        font-size: 14px;
+        width: auto;
+        border: 0;
+        align-items: flex-start;
+    }
+    .ptutos {
+        padding: 0 15px;
+    }
 
     button {
         background-color: #3882f6;
@@ -324,6 +411,12 @@
         border-color:#000000;
         color:#f9faf8;
     }
+
+    .bottonimage {
+        align-content: center;
+        align-items: center;
+        text-align: center;
+     }
 
     .contenido2 {
         display: flex;
@@ -536,7 +629,7 @@
         justify-content: flex-start;
         width: 250px;
         height: 80px;
-    padding-left: 100px;
+        padding-left: 100px;
     }   
 
     .logotext {
@@ -615,6 +708,8 @@
         padding-bottom: 50px;
         align-items: center;
     }
+
+
     .imgtext {
         display: flex;
         border: 3px;
@@ -669,6 +764,8 @@
         background-color: lightgray;
         border-radius: 15px;
     }
+
+
     .figtproductos {
         display: flex;
         width: auto;
@@ -689,7 +786,34 @@
         align-items: center;
         
     }
+
+    .figtproductoslomb {
+        background-color: rgba(211, 211, 211, 0.432);
+        display: flex;
+        width: auto;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 15px;
+    }
   
+    #tutorialk,
+     .tutorialk  {
+        background-color: rgba(211, 211, 211, 0.432);
+        display: flex;
+        width: auto;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+  #tutorialeslist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+  }
 
 
     img {
@@ -697,6 +821,12 @@
         height: 230px;
     
 
+    }
+
+    img.lombripro{
+        width: auto;
+        height: 350px;
+        border-radius: 10px;
     }
 
     .figt img {
@@ -736,6 +866,18 @@
         padding-left: 5px;
     }
 
+    .textfproductoslomb {
+        background-color: rgba(211, 211, 211, 0.432);
+        text-align: justify;
+        font-size: 15px;
+        width: auto;
+        height: auto;
+        padding-right: 10px;
+        padding-left: 5px;
+        border-radius: 15px;
+    }
+
+
 
     .ulproductos {
         display: flex;
@@ -770,7 +912,23 @@
 
     }
 
+    .titulostutos {
+        background-image: linear-gradient(0deg, rgba(179,179,179,1),rgba(140,140,140,.3));
+        margin-bottom: 2px;
+        border: 1px solid rgb(87, 87, 87);
+        border-radius: .4em;
+        margin: 10px 0 10px 0;
+        padding: 20px 0 20px 0;
+        display: flex;
+        width: 1200px;
+        justify-content: center;
+    }
 
+    .bottonimage {
+        align-content: center;
+        align-items: center;
+        text-align: center;
+     }
     .contenido2 {
         display: flex;
         background-color: #ebf2ff;
