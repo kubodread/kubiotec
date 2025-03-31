@@ -1,2 +1,2 @@
 # kubiotec
-Ejercicio de Proyecto Odin enfocado a Productos Agroecológicos 
+Generado gracias a ejercicio de Proyecto Odin, sitio enfocado a Productos Agroecológicos. Asesoria ambiental en normativa técnica y legal.  
