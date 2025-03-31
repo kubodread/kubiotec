@@ -49,7 +49,7 @@
                                 <a  class="amigosli" href="#redaccionaca"> Redacción académica  </a>
                             </li>
                             <li class="directorioli">
-                                <a  class="amigosli" href=""> Espacio libre </a>
+                                <a  class="amigosli" href="#imega"> Imega consultores </a>
                             </li>
                         </ul>
                     
@@ -87,16 +87,19 @@
                     
                 
             </p>
-            <button class="botonheader"><a class="botonheader" href="index.html">Inicio</a></button>
-                <button class="botonheader"><a class="botonheader" href="Productos.html">Productos</a></button>
-                <button class="botonheader"><a class="botonheader" href="tutoriales.html">Tutoriales</a></button>
-                <button class="botonheader"><a class="botonheader" href="kubiotecMX.html">Conoce más nuestros servicios</a></button>
-
+            <div id="menuheader"></div>    
+            <script>
+                fetch('menu.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('menuheader').innerHTML = data;
+                    });
+            </script>
         </div>
         <img id="imgheaderbio" src="images/manostierra.jpeg" alt="enlaces">
     </div>
     <div class="contenido1">
-        <h1 class="redamigostitulo"> Red de Colaboradores Kubiotec</h1>
+        <h1 class="titulocarru"> Red de Colaboradores Kubiotec</h1>
         
         <div id="kubyhe"></div>    
         <script>
@@ -112,7 +115,7 @@
        <!--  paginas html amigo balvina  -->
             <div id="balvina"></div>    
             <script>
-                fetch('imgpag/amigos1.html')
+                fetch('imgpag/balvina.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('balvina').innerHTML = data;
@@ -122,13 +125,26 @@
        <!--  paginas html para incluir amigos  -->
        <div id="redaccionaca"></div>    
        <script>
-           fetch('imgpag/amigos2.html')
+           fetch('imgpag/redaccion.html')
                .then(response => response.text())
                .then(data => {
                    document.getElementById('redaccionaca').innerHTML = data;
                });
        </script>
 <br>
+
+        <!--  paginas html para incluir amigos  -->
+        <div id="imega"></div>    
+        <script>
+            fetch('imgpag/imega.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('imega').innerHTML = data;
+                });
+        </script>
+<br>
+
+
 <!--  paginas html para incluir amigos  -->
         <div id="amigos3"></div>    
         <script>

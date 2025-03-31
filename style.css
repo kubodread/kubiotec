@@ -179,7 +179,9 @@
         width: auto;
         padding: 10px;
     }
-
+    .textokubiotec {
+        text-align: justify;
+    }
     p.pamigosp {
         padding: 5px;
         margin: 0;
@@ -213,6 +215,9 @@
         color: #1F2937;
     }
 
+
+
+
     #principaln{
 
     }
@@ -234,14 +239,14 @@
     }
 
 
-    .contenido1 h2 {
+    /* .contenido1 h2 {
         display: flex;
         font-size: 28px;
         color: #1f2937;
         font-weight: 900;
         text-align: center;
         margin: 10px;
-    }
+    } */
 
     .contenido1 {
         display: flex;
@@ -254,6 +259,52 @@
 
 
 
+    .titulocarru {
+        background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgba(31,41,55,1) 60%);
+        margin-bottom: 3px;
+        color: #e5e7eb;
+        font-size: 30px;
+        font-weight: 900;
+        text-align: center;
+        border: 1px solid rgb(87, 87, 87);
+        border-radius: .4em;
+        margin: 1px 0 1px 0;
+        padding: 5px 10px;
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+/* aquí carrusel */
+
+.inicio-carrusel-contenedor {
+    display: flex;
+    overflow-x: hidden; /* Oculta la barra de desplazamiento */
+    width: 400px; /* Asegura que el contenedor ocupe todo el ancho */
+    height: auto;
+  }
+  
+  .iniciocosascarrusel {
+    flex: 0 0 100%; /* Cada elemento ocupa el 100% del ancho */
+    display: flex;
+  }
+#anterior, #siguiente {
+    height: fit-content;
+}
+.botonescarrusel {
+    display: flex;
+    flex-direction: column;
+}
+
+img.lombriprocarrusel{
+    width: auto;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* aquí carrusel */
     .imgtext {
         display: flex;
         flex-direction: column;
@@ -313,6 +364,18 @@
     }
 
 
+    .figtkubimg {
+        display: flex;
+        width: 310px;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightgray;
+        border-radius: 15px;
+}
+
+
     img {
         width: 350px;
         height: 350px;
@@ -353,6 +416,7 @@
     .textf {
         text-align: justify;
         font-size: 15px;
+        padding: 0 10px;
     }
 
     .textfproductos {
@@ -377,10 +441,11 @@
         display: flex;
         width: auto;
         height: auto;
-        justify-content: space-between;
+        justify-content: center;
         flex-direction: column;
         align-items: center;
         border-radius: 15px;
+
     }
 
     #tutorialk{
@@ -491,7 +556,7 @@
     .textocont2 {
         display: flex;
         flex-direction: column;
-
+        text-align: justify;
     }
 
     .p1{
@@ -750,6 +815,9 @@
         color: #f9faf8;
         font-weight: 900;
     }
+    .textokubiotec {
+        text-align: justify;
+    }
 
     #imgheader {
         width: 160px;
@@ -792,12 +860,66 @@
         height: auto;
     }
 
+    .imgamigsite {
+        width: 350px;
+        height: auto;
+    }
+
+
     .textfbarra {
         text-align:left;
+        padding: 8px;
+    }
+
+/* espacio de carrusel */
+.inicio-carrusel-contenedor {
+    display: flex;
+    overflow-x: hidden; /* Oculta la barra de desplazamiento */
+    width: 900px; /* Asegura que el contenedor ocupe todo el ancho */
+  }
+  
+  .iniciocosascarrusel {
+    flex: 0 0 100%; /* Cada elemento ocupa el 100% del ancho */
+    display: inline-grid;
+  }
+#anterior, #siguiente {
+    height: fit-content;
+}
+.botonescarrusel {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulocarru {
+    background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgba(31,41,55,1) 60%);
+    margin-bottom: 3px;
+    color: #e5e7eb;
+    font-size: 30px;
+    border: 1px solid rgb(87, 87, 87);
+    border-radius: .4em;
+    margin: 1px 0 1px 0;
+    padding: 5px 10px;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+img.lombriprocarrusel{
+    width: auto;
+    height: 250px;
+    border-radius: 10px;
+}
+
+/* espacio de carrusel */
+    .iniciospag {
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
     }
 
     .contenido1 {
-        padding-top: 25px;
+        padding-top: 15px;
         padding-bottom: 50px;
         align-items: center;
     }
@@ -809,10 +931,18 @@
         border-color: #3882f6;
         padding-top: 20px;
         justify-content: space-between;
+        gap: 5px;
+        align-items: start;
+    }
+    .imgtextnoti {
+        display: flex;
+        border: 3px;
+        border-color: #3882f6;
+        padding-top: 5px;
+        justify-content: space-between;
         gap: 20px;
         align-items: start;
     }
-
 
     .directorio {
         display: flex;
@@ -855,7 +985,7 @@
 
     .figt {
         display: flex;
-        width: 230px;
+        width: 210px;
         height: auto;
         justify-content: space-between;
         flex-direction: column;
@@ -864,6 +994,51 @@
         border-radius: 15px;
     }
 
+    .figtkub {
+        
+            display: flex;
+            width: 250px;
+            height: auto;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+            background-color: lightgray;
+            border-radius: 15px;
+        
+    }
+    .figtkubimg {
+        display: flex;
+        width: 210px;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightgray;
+        border-radius: 15px;
+}
+    .imgtextkub {
+            display: flex;
+            border: 3px;
+            border-color: #3882f6;
+            padding-top: 20px;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: start;
+        
+    }
+
+
+    
+    .figtinicio2 {
+        display: flex;
+        width: auto;
+        height: 130px;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightgray;
+        border-radius: 15px;
+    }
 
     .figtproductos {
         display: flex;
@@ -916,8 +1091,8 @@
 
 
     img {
-        width: 230px;
-        height: 230px;
+        width: 210px;
+        height: 210px;
     
 
     }
@@ -950,8 +1125,9 @@
     }
 
     .textf {
-        text-align: center;
+        text-align: justify;
         font-size: 15px;
+        padding: 0 5px;
     }
 
     .textfproductos {
@@ -968,7 +1144,7 @@
         background-color: rgba(211, 211, 211, 0.432);
         text-align: justify;
         font-size: 15px;
-        width: auto;
+        width: 90%;
         height: auto;
         padding-right: 10px;
         padding-left: 5px;
@@ -1022,6 +1198,7 @@
         justify-content:flex-start;
         text-align: justify;
         padding: 10px;
+        width: 100%;
     }
 
     .menu-container {

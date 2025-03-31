@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kubiotec</title>
+    <title>Kubiotec :::::: Bio Soluciones </title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.ico">
+    <script src="carrusel.js"></script>
+
 </head>
 <body>
     <div class="barratop">
@@ -22,43 +24,66 @@
     </div>
     <div class="headergeneral">
         <div class="headertexto">
-            <h1>Salud y nutrición para plantas</h1>
-            <p>Productos agroecológicos para la salud del suelo y las plantas, 
-                combatir plagas sin afectar el ambiente. 
+            <h1>Asesoría ambiental</h1>
+            <p>Ponemos a tu disposición productos agroecológicos para la salud del suelo y las plantas. <br> 
+                Tanto para nutrir de forma saludable, como también combatir plagas sin afectar el ambiente. <br>
                 Promovemos el uso de microorganismos benéficos como alternativa para solucionar problemas ambientales</p>
-                <button class="botonheader"> <a class="botonheader" href="Productos.html">Productos</a></button>
-                <button class="botonheader"><a class="botonheader" href="tiendas.html">Tiendas y Viveros</a></button>
-                <button class="botonheader"><a class="botonheader" href="tutoriales.html"> Tutoriales</a></button>
-                <button class="botonheader"> <a class="botonheader" href="kubiotecMX.html">Conoce más nuestros servicios</a></button>
+                <!-- menu contenido header -->
+                <div id="menuheader"></div>    
+                <script>
+                    fetch('menu.html')
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById('menuheader').innerHTML = data;
+                        });
+                </script>
 
         </div>
         <img id="imgheader" src="images/lombrizfeliz.jpeg" alt="Lombriz feliz, imagen generada con Bing IA">
     </div>
 <br>
+<!-- noticias y actividades sección -->
+    <div id="principaln">
+        <div id="noticiasbarra"></div>    
+        <script>
+            fetch('noticiasbarra/noticias.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('noticiasbarra').innerHTML = data;
+                });
+        </script>
+        <!-- productos y servisios -->
+        <div class="iniciospag">
+            <div class="titulocarru"><p style="margin: 5px;">Productos y servicios Kubiotec </p></div>
+            <div class="botonescarrusel">
+                <div id="inicio"></div>    
+            <button id="anterior">Anterior</button>
+                <button id="siguiente">Siguiente</button>
+            </div>
 
-<div id="principaln">
-    <div id="noticiasbarra"></div>    
-    <script>
-        fetch('noticiasbarra/noticias.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('noticiasbarra').innerHTML = data;
-            });
-    </script>
-    
-
-<div id="inicio"></div>    
-<script>
-    fetch('inicio.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('inicio').innerHTML = data;
-        });
-</script>
-</div>
+            <div id="inicio2"></div>    
+        </div>
+        <script>
+            fetch('inicio.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('inicio').innerHTML = data;
+                    inicializarCarrusel();
+                });
+        </script>
+        <!-- amigos kubiotec sección -->
+            <script>
+                fetch('inicio2.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('inicio2').innerHTML = data;
+                        inicializarCarrusel();
+                    });
+            </script>
+    </div>
 
     <div class="contenido1">
-        <h2>El desarrollo y la naturaleza van de la mano</h2>
+        <p style="font-size: 40px; font-weight: 900; margin: 10px;">El desarrollo y la naturaleza van de la mano</p>
         <div class="imgtext">
             <div class="figt">
                 <img src="images/separa.jpeg" alt="Paisaje ideal en donde se separan los residuos, imagen generada por Bing IA">
@@ -104,5 +129,6 @@
             <p class="textfoot"> Copyright c Kubiotec by The Odin Project 2025</p>
         </div>
     </footer>
+
 </body>
 </html>

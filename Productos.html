@@ -24,20 +24,25 @@
     <div class="headergeneral">
         <div class="headertexto">
             <h1>Productos agroecológicos Kubiotec</h1>
+            <h4>Salud y nutrición para plantas</h4>
+
             <p>
                 Biosoluciones agroecológicas, productos enfocados a la salud y nutrición de las plantas ornamentales, huertos y cultivos productivas
                 para el control de plagas como hongos, bacterias e insectos oportunistas que afectan la salud de las plantas.
             </p>
-            <button class="botonheader"><a class="botonheader" href="index.html">Inicio</a></button>
-                <button class="botonheader"><a class="botonheader" href="tiendas.html">Tiendas y Viveros</a></button>
-                <button class="botonheader"><a class="botonheader" href="tutoriales.html">Tutoriales</a></button>
-                <button class="botonheader"><a class="botonheader" href="kubiotecMX.html">Conoce más de nuestros servicios</a></button>
-
+            <div id="menuheader"></div>    
+            <script>
+                fetch('menu.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('menuheader').innerHTML = data;
+                    });
+            </script>
         </div>
         <img id="imgheaderbio" src="images/produckubiotec.jpg" alt="Productos agroecológicos">
     </div>
     <div class="contenido1">
-        <h2>Algunos de los productos</h2>
+        <h2 class="titulocarru">Algunos de los productos</h2>
         <div class="imgtextproductos">
             <div class="figtproductos">
                 <img class="balimglogo" src="images/balblogosolo.jpg" alt="bacterias ácido lácticas">

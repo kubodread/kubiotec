@@ -30,155 +30,163 @@
     <div class="headergeneral">
       <div class="headertexto">
         <h1>Biólogo y Asesor Ambiental</h1>
-        <p>
+        <p class="textokubiotec">
           Mi nombre es José Félix Kubota Hernández, y como biólogo apasionado
           por el medio ambiente y la sostenibilidad, estoy comprometido en
           encontrar soluciones innovadoras y eficientes para proteger nuestro
           planeta. ¡Trabajemos juntos para crear un futuro más verde y
           sostenible!
+          <br>
+          <br> Estos servicio se basa en un enfoque biológico integral, considerando factores cruciales. 
+          Desde el uso responsable de los nutrientes y controladores de plagas, la capacitación 
+          de agua pluvial, el uso e implementación de biotecnologías que funcionan como estimulantes, 
+          previniendo el estrés hídrico y contribuyendo a una rápida regeneración a causa de los ataque de plagas. <br>
+         
         </p>
-        <button class="botonheader">
-          <a class="botonheader" href="index.html">Inicio</a>
-        </button>
-        <button class="botonheader">
-          <a class="botonheader" href="Productos.html">Productos</a>
-        </button>
-        <button class="botonheader">
-          <a class="botonheader" href="tiendas.html">Tiendas y Viveros</a>
-        </button>
-        <button class="botonheader">
-          <a class="botonheader" href="tutoriales.html">Tutoriales</a>
-        </button>
+        <div id="menuheader"></div>    
+        <script>
+            fetch('menu.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('menuheader').innerHTML = data;
+                });
+        </script>
       </div>
       <img id="imgheaderbio" src="images/jfkh.jpg" alt="biólogo" />
     </div>
     <div class="contenido1">
-      <h2>Algunos de mis servicios profesionales</h2>
-      <div class="imgtext">
-        <div class="figt">
+      <h2 class="titulocarru">Algunos de mis servicios profesionales</h2>
+      <div class="imgtextkub">
+        <div class="figtkub">
           <h4>Actividades Ambiental</h4>
-          <img src="images/eduamb.jpg" alt="" />
-          <div class="textf">
+          <img  class="figtkubimg"  src="images/eduamb.jpg" alt="" />
+          <div class="textf"> <br>
             Como asesor ambiental comprometido con la sostenibilidad, ofrezco
-            servicios integrales en educación y gestión ambiental.
-            <img src="images/eduambiente.jpg" alt="" />
+            servicios integrales en educación y gestión ambiental. 
+            <br><br> 
+            <img class="figtkubimg" src="images/eduambiente.jpg" alt="" /> <br>
             Mis programas de educación ambiental están diseñados para fomentar
             la conciencia y la acción, abordando desde la gestión integral de
             residuos hasta la remediación ambiental, la conservación de
-            ecosistemas y la reforestación.
-            <img src="images/reuniones.jpg" alt="" />
+            ecosistemas y la reforestación. <br>
+           <br> <img class="figtkubimg"  src="images/reuniones.jpg" alt="" /> <br>
             Además, implemento viveros para la producción de especies nativas,
             esenciales para la restauración de áreas degradadas y la promoción
-            de la biodiversidad.
-            <img src="images/viverok.jpg" alt="" />
-
+            de la biodiversidad. 
+            <br> <br>
+            <img class="figtkubimg"  src="images/viverok.jpg" alt="" />
+            <br>
             Mi enfoque holístico busca empoderar a comunidades y organizaciones
             para adoptar prácticas sostenibles que aseguren un futuro más verde
             y resiliente.
-            <img src="images/reunionempo.jpg" alt="" />
+            <br> <br>
+            <img class="figtkubimg"  src="images/reunionempo.jpg" alt="" />
+            <br>
           </div>
         </div>
-        <div class="figt">
+        <div class="figtkub">
           <h4>Servicios capacitación</h4>
-          <img src="images/compostamun.jpg" alt="" />
+          <img  class="figtkubimg" src="images/compostamun.jpg" alt="" />
           <div class="textf">
-            Servicios integrales de capacitación y asesoría productiva en
-            agroecología.
-            <img src="images/insumosulfo.jpg"
-              alt="preparando y enseñando hacer bioinsumos"/>
-
-            Mi enfoque se centra en la implementación de manejos agroecológicos
+            <br> Servicios integrales de capacitación y asesoría productiva en
+            agroecología. <br> <br>
+            <img class="figtkubimg"  src="images/insumosulfo.jpg" alt="preparando y enseñando hacer bioinsumos"/>
+              <br>
+            Capacitamos en la implementación de manejos agroecológicos
             sostenibles, la preparación de bioinsumos y plaguicidas naturales,
-            promoviendo la salud del suelo y las plantas.
-            <img src="images/preparacion.jpg"
-              alt="preparando y enseñando hacer bioinsumos"/>
-
+            promoviendo la salud del suelo y las plantas. <br> <br>
+            <img  class="figtkubimg" src="images/preparacion.jpg"  alt="preparando y enseñando hacer bioinsumos"/>
+            <br>
             Brindo asesoramiento especializado para optimizar actividades
             productivas en cultivos, jardines, hortalizas y plantas del hogar,
             fomentando prácticas respetuosas con el medio ambiente y la
-            biodiversidad.
-            <img src="images/recorridos.jpg" alt="Recorridos en cultivos" />
-            
-            Servicios de capacitación y asesoría, para emprender en el proceso de compostaje y lombricompostaje a diferentes escalas:pequeña mediana y gran escala.
-            <img src="images/compostagrandeparametro.jpg" alt="midiendo datos de composta"/>
-            También soluciones a las problemáticas como los olores desagradables, plagas, lenta degradación, flujo de trabajo, mal manejo del espacio entre otras problemáticas recurrentes en el compostaje.
-            
-            <img src="images/compostagrande.jpg" alt="Composta a gran escala"/>
+            biodiversidad. <br> <br>
+            <img class="figtkubimg"  src="images/recorridos.jpg" alt="Recorridos en cultivos" />
+            <br>
+            Servicios de capacitación, para emprender en el proceso de compostaje y lombricompostaje a diferentes escalas:pequeña mediana y gran escala.
+            <br><br>
+            <img  class="figtkubimg" src="images/compostagrandeparametro.jpg" alt="midiendo datos de composta"/>
+            <br>Planteando soluciones a las problemáticas como los olores desagradables, plagas, lenta degradación, flujo de trabajo, mal manejo del espacio entre otras problemáticas recurrentes en el compostaje.
+            <br><br>
+            <img class="figtkubimg"  src="images/compostagrande.jpg" alt="Composta a gran escala"/>
+            <br>
           </div>
         </div>
-        <div class="figt">
+        <div class="figtkub">
           <h4>Productos en venta</h4>
-          <img src="images/produckubiotec.jpg" alt="" />
+          <img class="figtkubimg"  src="images/produckubiotec.jpg" alt="" />
           <div class="textf">
-            Como biólogo especializado en soluciones agroecológicas, ofrezco una
+            <br>Como biólogo especializado en soluciones agroecológicas, ofrezco una
             gama de bioinsumos de alta calidad diseñados para optimizar la salud
-            de tus cultivos y el medio ambiente.
-            <img src="images/balactino.jpg" alt="Bio insumo bal" />
-
+            de tus cultivos y el medio ambiente. <br><br>
+            <img class="figtkubimg"  src="images/balactino.jpg" alt="Bio insumo bal" />
+            <br>
             Desde potentes estimulantes a base de microorganismos benéficos como
             bacterias ácido lácticas y microorganismos de montaña, hasta
             fertilizantes nutritivos y plaguicidas naturales que combaten
-            eficazmente plagas sin dañar la salud ni el ecosistema.
-            <img
-              src="images/recipientebal.jpg"
-              alt="Cultivo de microorganismos benéficos"
-            />
-            Además, proporciono lombriz californiana para un compostaje
+            eficazmente plagas sin dañar la salud ni el ecosistema. <br><br>
+            <img  class="figtkubimg" src="images/recipientebal.jpg" alt="Cultivo de microorganismos benéficos"            />
+            Además, promociono el uso de lombriz californiana para un compostaje
             eficiente y microorganismos especializados para acelerar la
             descomposición de materia orgánica, transformándola en tierra
-            fértil.
-            <img src="images/lombriznucleo.jpg" alt="" />
-
+            fértil. <br><br>
+            <img  class="figtkubimg" src="images/microorg.png" alt="Microorganismos benéficos sobre residuos orgánicos"/>
+            <br>Te Brindo el acompañamiento durante todo el proceso de aprendizaje, para que lograres establecer un sistema de compostaje y lombricompostaje sin fauna nociva.
+            <br><br>
+            <img  class="figtkubimg" src="images/lombriznucleo.jpg" alt="" />
+            <br>
             Con mis productos, podrás cultivar de manera sostenible, obteniendo
             cosechas abundantes y saludables mientras proteges nuestro planeta.
+            <br><br>
+            <img  class="figtkubimg" src="images/lombrizentina.webp" alt="" />
+            <br>
           </div>
-          <img
-            src="images/microorg.png"
-            alt="Microorganismos benéficos sobre residuos orgánicos"
-          />
         </div>
-        <div class="figt">
-          <h4>Proyectos especializados</h4>
-          <img src="images/modulovistatotal.jpg" alt="" />
+
+        <div class="figtkub">
+          <h4>Servicios especializados</h4>
+          <img class="figtkubimg"  src="images/asesoria.jpg" alt="" />
           <div class="textf">
-            Servicio especializado con propuestas 3D de distribución espacial
-            para centros de compostaje de diversas escalas.
-            <img src="images/zonacomposta.jpg" alt="" />
-
-            Este servicio se basa en un enfoque biológico integral, considerando
-            factores cruciales como lo son la capacitación de agua pluvial para
-            las necesidades dentro del centro de transformación.
-            <img src="images/colectagua.jpg" alt="" />
-
-            Los espacios adecuados para la gestión del residuo orgánico y el
-            escurrimiento de lixiviados en las diferentes etapas del proceso.
-            <img src="images/colectorlixi.jpg" alt="" />
-
-            El tratamiento y estabilización optimizando el manejo por medio de
-            biotecnologías sustentables con el uso de micro organismos benéficos
-            y los volúmenes de generación.
-            <img src="images/diagramacomposta.jpg" alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="contenido2">
-      <div class="textocont2">
-        <p class="p1">
-          <h3>Servicio de Análisis de Suelos en Sitio</h3>
-          Ofrecemos un servicio de diagnóstico rápido y preciso de suelos, directamente en tu terreno. <br>
-          Determinamos parámetros esenciales para la salud de tus cultivos: <br>
-          <b>Macronutrientes:</b> Nitrógeno (N), Fósforo (P) y Potasio (K). <br>
+            <br> Ofrecemos un servicio de diagnóstico rápido de suelos, directamente en tu terreno. <br>
+            Conocer a partir de indicadores biológicos, con mediciones en sitio determinamos parámetros esenciales para la salud de tus cultivos: <br>
+            <br>
+            <img class="figtkubimg"  src="images/milpa2.webp" alt="" /> <br>
+            <b>Macronutrientes:</b> Nitrógeno (N), Fósforo (P) y Potasio (K). <br>
           <b>Conductividad Eléctrica (CE) y pH:</b>  Para evaluar la salinidad y acidez del suelo. <br>
           <b>Interpretación de Indicadores Visuales:</b>  Identificación de signos en el suelo y plantas para una intervención efectiva. <br>
           <b>Recomendaciones de Bioinsumos:</b>  Medición de parámetros para la dosificación precisa para optimizar tus cultivos. <br>
-          Con nuestro análisis, obtendrás información clave para mejorar la fertilidad y productividad de tu suelo de manera eficiente.        </p>
-        <p class="p2">- J. F. Kubota Hdez. - Biólogo - Asesor Ambiental</p>
+          <br>
+          <img  class="figtkubimg" src="images/milpamini.jpg" alt="" />
+          <br>
+          Con nuestro análisis, obtendrás información clave para mejorar la fertilidad y productividad de tu suelo de manera eficiente.  
+          <br><br><img  class="figtkubimg" src="images/suelocalidadmicro.webp" alt="" /> <br>
+          <b>Control de plagas:</b>  Con las recomendaciones necesarias para mantener controladas las plagas, esto incluye los manejos adecuados sin dañar la salud y el ambiente. <br>
+            <br><img  class="figtkubimg" src="images/plagagallinaciega.jpg" alt="" /> <br>
+            La dosificación adecuada con la frecuencia necesaria para el control efectivo y mantener los cultivos saludables.
+            <br><br><img  class="figtkubimg" src="images/plagaoruga.jpg" alt="" />
+            <br></div>
+        </div>
+
       </div>
     </div>
+        <div class="contenido2">
+          <div class="textocont2">
+            <p class="p1">
+              <h3>Entre otros servicio de profesionales:</h3>
+              Asesoramiento en normativas ambientales tanto técnicas como reglamentarias, legislaciones ambientales y orientación de atribuciones gubernamentales municipales, estatales y federales en el ámbito ambiental.
+              <br> <br>
+              Integramos memorias técnicas, planeación de actividades y reporte de informes técnicos, propuestas de reforestación con especies nativas, acciones de remediación, gestión integral de residuos sólidos urbanos, propuestas de de distribución espacial para centros de compostaje de diversas escalas a partir de los volúmenes de generación. <br>
+              <br> Estos servicio se basa en un enfoque biológico integral, considerando factores cruciales como lo son la capacitación de agua pluvial para las necesidades dentro de los proyectos.
+              <br> Cuantificación de espacios necesarios para las áreas y actividades a realizar, diagramas de operación y capacitación de grupos de trabajo.
+              <br> El tratamiento y estabilización de lixiviados, aguas residuales y desechos sólidos, optimizando el manejo por medio de biotecnologías sustentables con el uso de micro organismos benéficos.
+            
+              <p class="p2">- J. F. Kubota Hdez. - Biólogo - Asesor Ambiental</p>
+          </div>
+        </div>
+    
+   
     <div class="contenidofininfo">
-      <img
-        id="imgfin" src="images/kubobal.jpg" alt="aplicación de Bacterias ácido lácticas en PTAR"/>
+      <img id="imgfin" src="images/kubobal.jpg" alt="aplicación de Bacterias ácido lácticas en PTAR"/>
       <div class="cuadrofininfo">
         <div class="textcuadro">
           <p class="pc1">

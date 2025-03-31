@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kubiotec ::::: Productos agroecológicos</title>
+    <title>Kubiotec ::::: Tutoriales agroecológicos</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.ico">
 
@@ -23,24 +23,27 @@
     </div>
     <div class="headergeneral">
         <div class="headertexto">
-            <h1>Productos agroecológicos Kubiotec</h1>
+            <h1 class="titulocarru">Tutoriales Kubiotec</h1>
             <p>
                 Biosoluciones agroecológicas, te presentamos algunos tutoriales enfocados a la salud y nutrición de las plantas ornamentales, huertos y cultivos productivas,
                 conocer los niveles de pH del suelo de forma casera o con tiras reactivas, uso recomendado de enmiendas o suplementos, la aplicación 
                 y dosificación para el control de plagas como hongos, bacterias e insectos oportunistas que afectan la salud de las plantas entre otros tutoriales de interés y utilidad agroecológica.
             </p>
-            <button class="botonheader"><a class="botonheader" href="index.html">Inicio</a></button>
-            <button class="botonheader"><a class="botonheader" href="Productos.html">Productos</a></button>
-            <button class="botonheader"><a class="botonheader" href="tiendas.html">Tiendas y Viveros</a></button>
-            <button class="botonheader"><a class="botonheader" href="kubiotecMX.html">Conoce más de nuestros servicios</a></button>
-
+            <div id="menuheader"></div>    
+            <script>
+                fetch('menu.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('menuheader').innerHTML = data;
+                    });
+            </script>
         </div>
         <img id="imgheaderbio" src="images/preparacion.jpg" alt="Preparando agroecológicos">
     </div>
     <div class="contenido1">
 
-        <h2>Algunos tutoriales de interés para la salud del suelo y las plantas</h2>
-       
+        <h2 class="titulocarru">Algunos tutoriales de interés para la salud del suelo y las plantas</h2>
+       <br>
          <div id="tutorialeslist"></div>
        <script>
             fetch('tutorialeslista.html')
