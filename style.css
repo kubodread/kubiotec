@@ -193,6 +193,8 @@
         margin:3px;
         border-radius: 10px;
         margin-bottom: 10px;
+        border: 1px solid;
+        margin-bottom: 10px;
     }
 
     #imgheaderbio {
@@ -224,8 +226,10 @@
     .titulonoticias {
         display: flex;
         width: 100%;
-        background-color: #abc937;
-        border-radius: 10px;
+        /* background-color: #abc937; */
+        background: linear-gradient(0deg,rgba(171,201,55,1) 0%, rgba(51,64,0,1) 60% );
+        border: 2px solid #b4b4b4;
+        border-radius: 20px;
         align-items: center;
         justify-content: center;
     }
@@ -413,11 +417,25 @@ img.lombriprocarrusel{
     .figt img {
         border-radius: .61em;
     }
+
+    .figtnoti {
+        background: #c2c2c2;
+        border-radius: 20px;
+        padding: 5px;
+    }
     .textf {
         text-align: justify;
         font-size: 15px;
         padding: 0 10px;
     }
+
+    .figtproductos {
+        width: 95%;
+        margin: 3px;
+        border:2px solid #888;
+        border-radius: 20px;
+    }
+
 
     .textfproductos {
         text-align: justify;
@@ -535,12 +553,19 @@ img.lombriprocarrusel{
     }
 
     button {
-        background-color: #3882f6;
+        background-color: #abc937;
         border-radius: .4em;
         border-color:#000000;
         color:#f9faf8;
     }
-
+    button.buttoninfo {
+        background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgba(31,41,55,1) 60%);
+        /* background-color: #abc937; */
+        border-radius: .4em;
+        border-color:#000000;
+        color:#ffffff;
+        font-weight: 900;
+    }
     .bottonimage {
         align-content: center;
         align-items: center;
@@ -706,12 +731,178 @@ img.lombriprocarrusel{
         padding-top:100px;
         
     }
+/* Inicio css infonodal  */
+
+#productoinfobal {
+    
+    /* position: fixed;
+    top: 50%;
+    left: 50%; */
+    width: 350px;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* z-index: 1000; */
+    display: none;
+    justify-content:center;
+    align-items:center;
+    /* transform:translate(-50%,-50% ) ; */
+}
+#productoinfoultrabal {
+    
+    /* position: fixed;
+    top: 50%;
+    left: 50%; */
+    width: 350px;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* z-index: 1000; */
+    display: none;
+    justify-content:center;
+    align-items:center;
+    /* transform:translate(-50%,-50% ) ; */
+}
+
+#productoinfosulfo {
+    
+    /* position: fixed;
+    top: 50%;
+    left: 50%; */
+    width: 350px;
+    height: 100%;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* z-index: 1000; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* transform:translate(-50%,-50% ) ; */
+}
+
+#productoinfojabon {
+    
+    /* position: fixed;
+    top: 50%;
+    left: 50%; */
+    width: 350px;
+    height: auto;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* z-index: 1000; */
+    display: none;
+    justify-content:center;
+    align-items:center;
+    /* transform:translate(-50%,-50% ) ; */
+}
+ .infocuadro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+ .infocuadro2 {
+    display: flex;
+    flex-direction: column;
+
+ }
+ 
+.modal {
+    background: white;
+    width: 100%px;
+    max-width: 500px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  .flexicon {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .headerinfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .headerinfotitulo {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+    justify-content: space-between;
+    padding-left: 10px
+  }
+  .flexinfoclose {
+    display: flex;
+    padding-right: 20px;
+    align-items: flex-start;
+  }
+  
+  .icon {
+    color: royalblue;
+    font-size: 26px;
+    font-weight: 700;
+    background: lavender;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* .textinfo {
+    text-align:left;
+    padding-right: 15px;
+    padding-bottom: 5px;
+  } */
+  
+  .close-button {
+    background: #eee;
+    border-radius: 50%;
+    color: #888;
+    font-weight: 400;
+    font-size: 16px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    padding: 0;
+  }
+  
+  /* button {
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+  } */
+  
+  .flexinfobutton {
+    display: flex;
+    justify-content:flex-start ;
+    flex-direction: row;
+    margin: 10px 0 10px 0px;
+  }
+  
+  
+  button.infocerrar {
+    background: white;
+    border: 1px solid #ddd;
+    color: royalblue;
+    width: 100px;
+    margin: 0 5px;
+  }
+/* fin de css infoproductos */
 
 
   }
 
 
-@media only screen and (min-width:1001px) {
+@media only screen and (min-width:1000px) {
 
     * {
         box-sizing: border-box;
@@ -824,6 +1015,8 @@ img.lombriprocarrusel{
         height: 160px;
         margin:30px;
         border-radius: 10px;
+        border: 1px solid;
+
     }
 
     #imgheaderbio {
@@ -870,6 +1063,14 @@ img.lombriprocarrusel{
         text-align:left;
         padding: 8px;
     }
+
+    .titulonoticias {
+        background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgba(31,41,55,1) 60%);
+        color: #ffffff;
+        padding: 3px 15px;
+        border-radius: 20px;
+    }
+
 
 /* espacio de carrusel */
 .inicio-carrusel-contenedor {
@@ -1089,6 +1290,10 @@ img.lombriprocarrusel{
     height: auto;
   }
 
+  .tutocomposta {
+    display: flex;
+    flex-direction: column;
+  }
 
     img {
         width: 210px;
@@ -1180,6 +1385,15 @@ img.lombriprocarrusel{
         border-radius: .4em;
         border-color:#3882f6;
         color:#f9faf8;
+    }
+
+    button.buttoninfo {
+        background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgba(31,41,55,1) 60%);
+        /* background-color: #abc937; */
+        border-radius: .4em;
+        border-color:#000000;
+        color:#ffffff;
+        font-weight: 900;
     }
 
     .listaamigos {
@@ -1357,7 +1571,171 @@ img.lombriprocarrusel{
         height: 800px;
       padding-top: 100px;
     }
+/* Inicio css infonodal  */
 
+#productoinfobal {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 850px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    justify-content:center;
+    align-items:center;
+    transform:translate(-50%,-50% ) ;
+}
+#productoinfoultrabal {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 850px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    justify-content:center;
+    align-items:center;
+    transform:translate(-50%,-50% ) ;
+}
+
+#productoinfosulfo {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 700px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transform:translate(-50%,-50% ) ;
+}
+
+#productoinfojabon {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 850px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    justify-content:center;
+    align-items:center;
+    transform:translate(-50%,-50% ) ;
+}
+ .infocuadro {
+    display: flex;
+    flex-direction: row;
+
+ }
+ .infocuadro2 {
+    display: flex;
+    flex-direction: column;
+
+ }
+ 
+.modal {
+    background: white;
+    width: 100%px;
+    max-width: 850px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  
+  .flexicon {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .headerinfo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .headerinfotitulo {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 0;
+    justify-content: space-between;
+  }
+  .flexinfoclose {
+    display: flex;
+    padding-right: 20px;
+    align-items: flex-start;
+  }
+  
+  .icon {
+    color: royalblue;
+    font-size: 26px;
+    font-weight: 700;
+    background: lavender;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* .textinfo {
+    text-align:left;
+    padding-right: 15px;
+    padding-bottom: 5px;
+  } */
+  
+  .close-button {
+    background: #eee;
+    border-radius: 50%;
+    color: #888;
+    font-weight: 400;
+    font-size: 16px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #eee;
+    padding: 0;
+  }
+  
+  /* button {
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+  } */
+  
+  .flexinfobutton {
+    display: flex;
+    justify-content:flex-start ;
+    flex-direction: row;
+    margin: 10px 0 10px 0px;
+  }
+  
+  
+  button.infocerrar {
+    background: white;
+    border: 1px solid #ddd;
+    color: royalblue;
+    width: 100px;
+    margin: 0 5px;
+  }
+/* fin de css infoproductos */
 
 
 }
