@@ -897,8 +897,64 @@ img.lombriprocarrusel{
     margin: 0 5px;
   }
 /* fin de css infoproductos */
+ /* inicio cv */
+ .cvtxtlat {
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    padding: 10px;
+}
+.textcvjust {
+    background: #f1f1f1;
+    padding: 2%;
+    border-radius: 30px;
+}
 
 
+li.textcvjust {
+    text-align: left;
+    padding: 0 10px;
+}
+ul.textcvjust{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0 10px;
+    list-style: inside;
+}
+
+ button.recocv {
+    background: #3882f6; 
+}
+button.constcv {
+    background: #3882f6; 
+}
+
+button.poncv {
+    background: #3882f6; 
+}
+button.recv {
+    background: #3882f6; 
+}
+
+button.infocerrarcv {
+    background: white;
+    border: 1px solid #3882f6;
+    color: royalblue;
+    width: auto;
+    margin: 0 5px;
+    font-size: 30px;
+    padding: 15px;
+    
+  }
+  .flexinfobuttoncv {
+    display: flex;
+    justify-content:center ;
+    flex-direction: row;
+    margin: 10px 0 10px 0px;
+  }
+
+/* fin cv */
   }
 
 
@@ -1737,5 +1793,80 @@ img.lombriprocarrusel{
   }
 /* fin de css infoproductos */
 
+/* inicio estilo cv */
+
+.cvdiv1{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.cvdiv2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.cvdivlat {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.cvtxtlat {
+    background-color: #f1f1f1;
+    border-radius: 30px;
+    padding: 10px;
+}
+.textcvjust {
+    background: #f1f1f1;
+    padding: 2%;
+    border-radius: 30px;
+}
+.constanciascv {
+    justify-content: center;
+    display: flex;
+}
+
+.imgcv {
+    width: 900px;
+    height: auto;
+}
+
+.recocv {
+    background: #3882f6; 
+}
+
+button.infocerrarcv {
+    background: white;
+    border: 1px solid #3882f6;
+    color: royalblue;
+    width: auto;
+    margin: 0 5px;
+    font-size: 30px;
+    padding: 15px;
+  }
+  .flexinfobuttoncv {
+    display: flex;
+    justify-content:center ;
+    flex-direction: row;
+    margin: 10px 0 10px 0px;
+  }
+
+
+li.textcvjust {
+    text-align: left;
+    padding: 0 10px;
+}
+ul.textcvjust{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 0 10px;
+    list-style: inside;
+}
+
+
+/* fin estilo cv */
 
 }
