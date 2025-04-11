@@ -1,3 +1,13 @@
+window.onload = function () {
+
+   var load = document.getElementById('load');
+    load.style.visibility = 'hidden';
+    load.style.opacity = '0';
+
+   
+};
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const botonesRecocv = document.querySelectorAll('.recocv');
     const recomCvDiv = document.getElementById('recomcv');
