@@ -37,6 +37,8 @@
         height: 110px;
         position: fixed;
         border-radius: 10px;
+        z-index: 10000;
+
     }
 
     #logo {
@@ -89,7 +91,26 @@
         border-radius: 10px;
         width: 85px;
         margin: 2px;
+        outline-color: rgba(49, 138, 172, 0.4);
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
+
+    .litop:hover {
+        border-radius: 0.5em 1.2em;
+        background: #008ac0;
+        color: #fff !important;
+         box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 40px;
+    text-shadow: 1px 1px 6px #fff;
+    
+    }
+
+        .nivelcontacto {
+            display: flex;
+            flex-direction: row;
+        }
+
 
      .tutolistt,
      .tutolist {
@@ -155,7 +176,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 75px;
+        padding-top: 120px;
+        
     }
     .headertexto {
         display: flex;
@@ -197,6 +219,22 @@
         margin-bottom: 10px;
     }
 
+    #imgheader:hover{
+        transition:all .5s ease-in-out;
+        -webkit-border-radius:100%;
+        box-shadow: 0px 0px 15px 15px #00d4f0;
+        -webkit-box-shadow: 0px 0px 15px 15px #00668f;
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+     }
+.efeimgheader:hover #imgheader {
+    -webkit-transform:scale(1.3);transform:scale(1.3);
+}
+
+.efeimgheaderv{
+    overflow:hidden;
+}
+
     #imgheaderbio {
         width: 280px;
         height: auto;
@@ -217,10 +255,20 @@
     .botonheader {
         background-color: #abc937;
         color: #1F2937;
+        transition: all 1s ease;
+        position: relative;
+    }
+
+    .botonheader:hover {
+        background: #318aac;
+        color: #fff !important;
     }
 
 
 
+
+
+    
 
     #principaln{
 
@@ -234,11 +282,19 @@
         border-radius: 20px;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
     #noticiasbarra{
 
     }
+
+    .barranotis{
+        display: flex;
+        flex-direction: column;
+        padding-top: -25px;
+    }
+
 
     .textfbarra {
         text-align:justify;
@@ -261,12 +317,13 @@
         align-items: center;
         flex-wrap: wrap;
         flex-direction: column;
+        align-content: center;
     }
 
 
 
     .titulocarru {
-        background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgba(31,41,55,1) 60%);
+        background: linear-gradient(0deg, #3882f6 0%, rgba(31,41,55,1) 60%);
         margin-bottom: 3px;
         color: #e5e7eb;
         font-size: 30px;
@@ -309,8 +366,25 @@ img.lombriprocarrusel{
     height: 300px;
     border-radius: 10px;
 }
+.textfproductoslombcar {
+    background-color: rgba(211, 211, 211, 0.432);
+    text-align: justify;
+    font-size: 15px;
+    width: auto;
+    height: auto;
+    padding-right: 25px;
+    padding-left: 35px;
+    border-radius: 15px;
+}
+
 
 /* aquí carrusel */
+
+#inicio {
+    justify-content: space-around;
+}
+
+
     .imgtext {
         display: flex;
         flex-direction: column;
@@ -381,6 +455,22 @@ img.lombriprocarrusel{
         border-radius: 15px;
 }
 
+    img.figtkubimg:hover {
+        filter: saturate(180%);
+    }
+
+    img.figtkubimg::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        position: absolute;
+        background: inherit;
+        filter: blur(80px)
+        saturate(400%);
+    
+    }
+
 
     img {
         width: 350px;
@@ -415,9 +505,10 @@ img.lombriprocarrusel{
         height: auto;
     }
 
-    .figtproductos img
     .figt img {
         border-radius: .61em;
+        mask-image: linear-gradient( #1f2937 40%, transparent );
+
     }
 
     .figtnoti {
@@ -471,7 +562,7 @@ img.lombriprocarrusel{
     #tutorialk{
         background-color: rgba(211, 211, 211, 0.432);
         display: flex;
-        width:min-content;
+        width:300px;
         height: auto;
         justify-content: space-between;
         flex-direction: row;
@@ -487,6 +578,12 @@ img.lombriprocarrusel{
         flex-direction: row;
         align-items: center;  
     }
+
+    .jardin1 {
+        mask-image: linear-gradient( #1f2937 40%, transparent );
+        display: flex;
+    }
+
 
     #tutorialeslist {
         display: flex;
@@ -584,6 +681,8 @@ img.lombriprocarrusel{
         display: flex;
         flex-direction: column;
         text-align: justify;
+        padding: 0 20px;
+        width: 80%;
     }
 
     .p1{
@@ -632,9 +731,30 @@ img.lombriprocarrusel{
     .contactw {
         display: flex;
         align-content: center;
-        align-items: flex-end;
+        align-items: center;
+        color: #fff !important;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 0.5em 1.2em;
+        background: #318aac;
+        position: relative;
+        border: 2px solid #318aac;
+        outline: 2px solid;
+        outline-color: rgba(49, 138, 172, 0.4);
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
        }
     
+       .contactw:hover{
+        box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+        outline-color: rgba(49, 138, 172, 0);
+        outline-offset: 80px;
+        text-shadow: 1px 1px 6px #fff;
+        border-shadow: 
+    
+        
+        }
+
+
 
     #whatsappn {
         width: auto;
@@ -703,15 +823,23 @@ img.lombriprocarrusel{
         width: auto;
         height: 35px;
         margin: 1px solid #000000;
-        border-radius: 6px;
+        border-radius: 0.5em 1.2em;
         font-weight: 600;
         justify-content: center;
         margin: 10px 0 10px 0;
         align-items: center;
-        background-color: #abc937;
-        color: #1F2937;
-    
+        color: #f8f8f8;
+        outline-color: rgba(49, 138, 172, 0.4);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
+            .cuadrofinbproductos:hover {
+                box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+                outline-color: rgba(49, 138, 172, 0);
+                outline-offset: 80px;
+                text-shadow: 1px 1px 6px #fff;
+                border-shadow: 
+            }
+
 
 
 
@@ -793,6 +921,50 @@ img.lombriprocarrusel{
     align-items:center;
     /* transform:translate(-50%,-50% ) ; */
 }
+#productoinfodiato {
+    
+    /* position: fixed;
+    top: 50%;
+    left: 50%; */
+    width: 350px;
+    height: auto;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* z-index: 1000; */
+    display: none;
+    justify-content:center;
+    align-items:center;
+    /* transform:translate(-50%,-50% ) ; */
+}
+#productoinfomma {
+    
+    /* position: fixed;
+    top: 50%;
+    left: 50%; */
+    width: 350px;
+    height: auto;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* z-index: 1000; */
+    display: none;
+    justify-content:center;
+    align-items:center;
+    /* transform:translate(-50%,-50% ) ; */
+}
+
+#productoinfomulti {
+    
+    /* position: fixed;
+    top: 50%;
+    left: 50%; */
+    width: 350px;
+    height: auto;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    /* z-index: 1000; */
+    display: none;
+    justify-content:center;
+    align-items:center;
+    /* transform:translate(-50%,-50% ) ; */
+}
+
  .infocuadro {
     display: flex;
     flex-direction: column;
@@ -939,6 +1111,29 @@ button.recv {
     background: #3882f6; 
 }
 
+.cv2 {
+
+    color: #1F2937;
+    /* transition: all 1s ease; */
+    border: 2px solid #318aac;
+    outline: 1px solid;
+    position: relative;
+        outline-color: rgba(49, 138, 172, 0.4);
+transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+.cv2:hover {
+    background: #008ac0;
+    color: #fff !important;
+     box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+outline-color: rgba(49, 138, 172, 0);
+outline-offset: 80px;
+text-shadow: 1px 1px 6px #fff;
+border-shadow:   
+}
+
+
 button.infocerrarcv {
     background: white;
     border: 1px solid #3882f6;
@@ -957,6 +1152,12 @@ button.infocerrarcv {
   }
 
 /* fin cv */
+
+.minamig {
+    display: flex;
+
+}
+
 
 /* loader */
 
@@ -1015,9 +1216,61 @@ button.infocerrarcv {
 }
 /* Fin loader */
 
+.feeds {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+/* inicio taller diapo */
+#slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: auto; /* Importante: Ancho total para 7 imágenes */
+
+}
+
+#slides img {
+    width: auto;
+    height: auto;
+}
+
+.buttoninfo:hover {
+    opacity: 1;
+}
+
+.divtecomp {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+
+.divtecomp img {
+    display: flex;
+    width: 300px;
+    height: auto;
+    margin: 20px 10px;
+    border-radius: 25px;
+    mask-image: linear-gradient( #1f2937 70%, transparent );
+
+}
+/*  fin taller diato */
+
+
 
 
   }
+
+
+
+
 
 
 @media only screen and (min-width:1000px) {
@@ -1086,6 +1339,24 @@ button.infocerrarcv {
         padding-right: 20px;
     }
 
+    .litop{
+        outline-color: rgba(49, 138, 172, 0.4);
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+        .directorioli:hover,
+    .litop:hover {
+        border-radius: 0.5em 1.2em;
+        background: #008ac0;
+        color: #fff !important;
+         box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 40px;
+    text-shadow: 1px 1px 6px #fff;
+    
+    }
+
+
     .ptutos{
         justify-content: flex-start;
         justify-content: space-between;
@@ -1137,6 +1408,23 @@ button.infocerrarcv {
 
     }
 
+        #imgheader:hover{
+            transition:all .5s ease-in-out;
+            -webkit-border-radius:100%;
+            box-shadow: 0px 0px 15px 15px #00d4f0;
+            -webkit-box-shadow: 0px 0px 15px 15px #00668f;
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+         }
+    .efeimgheader:hover #imgheader {
+        -webkit-transform:scale(1.3);transform:scale(1.3);
+    }
+
+    .efeimgheaderv{
+        overflow:hidden;
+    }
+
+
     #imgheaderbio {
         width: auto;
         height: 360px;
@@ -1146,7 +1434,30 @@ button.infocerrarcv {
     }
     #imgheaderbio {
         mask-image: linear-gradient( #1f2937 40%, transparent );
+        transition:all .5s ease-in-out;
+
     }
+
+    .contenedor#imgheaderbio:hover{
+        -webkit-transform:scale(1.3);transform:scale(1.3);
+    }
+
+    .contenedor:hover  #imgheaderbio {
+        -webkit-transform:scale(1.3);
+        transform:scale(1.3);
+    }
+
+    .contenedor {
+        width: auto;
+        height: 360px;
+        margin:30px;
+        overflow:hidden;
+        mask-image: linear-gradient( #1f2937 40%, transparent );
+
+    }
+
+    
+
 
     h2 {
         font-size: 48px;
@@ -1191,9 +1502,18 @@ button.infocerrarcv {
         padding: 3px 15px;
         border-radius: 20px;
     }
-
+    .barranotis{
+        display: flex;
+        flex-direction: column;
+        padding-top: -25px;
+    }
 
 /* espacio de carrusel */
+
+.inicio {
+    justify-content: space-around;
+}
+
 .inicio-carrusel-contenedor {
     display: flex;
     overflow-x: hidden; /* Oculta la barra de desplazamiento */
@@ -1234,6 +1554,13 @@ img.lombriprocarrusel{
 }
 
 /* espacio de carrusel */
+
+.nivelcontacto {
+    display: flex;
+    flex-direction: row;
+}
+
+
     .iniciospag {
         display: flex;
         flex-direction: column;
@@ -1242,7 +1569,7 @@ img.lombriprocarrusel{
 
     .contenido1 {
         padding-top: 15px;
-        padding-bottom: 50px;
+        padding-bottom: 20px;
         align-items: center;
     }
 
@@ -1338,6 +1665,16 @@ img.lombriprocarrusel{
         background-color: lightgray;
         border-radius: 15px;
 }
+
+img.figtkubimg {
+   filter: sepia(60%);
+
+}
+
+img.figtkubimg:hover {
+    filter: saturate(180%);
+}
+
     .imgtextkub {
             display: flex;
             border: 3px;
@@ -1415,6 +1752,23 @@ img.lombriprocarrusel{
     display: flex;
     flex-direction: column;
   }
+
+
+  .jardin1 {
+    mask-image: linear-gradient( #1f2937 40%, transparent );
+    display: flex;
+    border-radius: 25px;
+}
+
+.expand {
+  
+  transition:all .5s ease-in-out;
+}
+.expand:hover { 
+       -webkit-transform:scale(1.9);transform:scale(1.9);
+       mask-image: linear-gradient( #1f2937 90%, transparent );
+
+}
 
     img {
         width: 210px;
@@ -1507,6 +1861,36 @@ img.lombriprocarrusel{
         border-color:#3882f6;
         color:#f9faf8;
     }
+    .buttoninfo,
+    .infocerrar,
+    .botonheader {
+        color: #1F2937;
+        /* transition: all 1s ease; */
+        border: 2px solid #318aac;
+        outline: 1px solid;
+        position: relative;
+            outline-color: rgba(49, 138, 172, 0.4);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    
+    }
+
+    .buttoninfo:hover,
+    .infocerrar:hover,
+    .botonheader:hover {
+        background: #008ac0;
+        color: #fff !important;
+         box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    border-shadow:   
+    }
+
+
+ 
+
+
+
 
     button.buttoninfo {
         background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgba(31,41,55,1) 60%);
@@ -1542,6 +1926,13 @@ img.lombriprocarrusel{
 
     }
 
+    #menuheader {
+       display: flex;
+       flex-wrap: wrap;
+        gap: 5px;
+    }
+
+
     .titulostutos {
         background-image: linear-gradient(0deg, rgba(179,179,179,1),rgba(140,140,140,.3));
         margin-bottom: 2px;
@@ -1555,10 +1946,14 @@ img.lombriprocarrusel{
     }
 
     .bottonimage {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
         align-content: center;
         align-items: center;
         text-align: center;
      }
+
     .contenido2 {
         display: flex;
         background-color: #ebf2ff;
@@ -1595,6 +1990,29 @@ img.lombriprocarrusel{
         justify-content: center;
     }
 
+    .cuadrofinbproductos{
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: 35px;
+        margin: 1px solid #000000;
+        border-radius: 0.5em 1.2em;
+        font-weight: 600;
+        justify-content: center;
+        margin: 10px 0 10px 0;
+        align-items: center;
+        color: #f8f8f8;
+        outline-color: rgba(49, 138, 172, 0.4);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+            .cuadrofinbproductos:hover {
+                box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+                outline-color: rgba(49, 138, 172, 0);
+                outline-offset: 80px;
+                text-shadow: 1px 1px 6px #fff;
+                border-shadow: 
+            }
+           
 
     #imgfin {
         display: flex;
@@ -1639,7 +2057,29 @@ img.lombriprocarrusel{
     display: flex;
     align-content: center;
     align-items: center;
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 0.5em 1.2em;
+    background: #318aac;
+    position: relative;
+    border: 2px solid #318aac;
+    outline: 2px solid;
+    outline-color: rgba(0, 0, 0, 0.4);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
    }
+
+   .contactw:hover{
+    box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    text-shadow: 1px 1px 6px #fff;
+    border-shadow: 
+
+    
+    }
+
+
 
     #whatsappn {
         width: auto;
@@ -1714,7 +2154,7 @@ img.lombriprocarrusel{
     top: 50%;
     left: 50%;
     width: 850px;
-    height: 100%;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     display: none;
@@ -1739,6 +2179,52 @@ img.lombriprocarrusel{
 }
 
 #productoinfojabon {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 850px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    justify-content:center;
+    align-items:center;
+    transform:translate(-50%,-50% ) ;
+}
+
+#productoinfodiato {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 850px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    justify-content:center;
+    align-items:center;
+    transform:translate(-50%,-50% ) ;
+}
+
+#productoinfomma {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 850px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    justify-content:center;
+    align-items:center;
+    transform:translate(-50%,-50% ) ;
+}
+
+
+#productoinfomulti {
     
     position: fixed;
     top: 50%;
@@ -1901,6 +2387,28 @@ img.lombriprocarrusel{
     background: #3882f6; 
 }
 
+.cv2 {
+
+    color: #1F2937;
+    /* transition: all 1s ease; */
+    border: 2px solid #318aac;
+    outline: 3px solid;
+    position: relative;
+
+}
+
+.cv2:hover {
+    background: #008ac0;
+    color: #fff !important;
+     box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+outline-color: rgba(49, 138, 172, 0);
+outline-offset: 40px;
+text-shadow: 1px 1px 6px #fff;
+
+}
+
+
+
 button.infocerrarcv {
     background: white;
     border: 1px solid #3882f6;
@@ -1933,6 +2441,11 @@ ul.textcvjust{
 
 
 /* fin estilo cv */
+.minamig {
+    display: flex;
+
+}
+
 
 /* loader */
 
@@ -2000,7 +2513,48 @@ ul.textcvjust{
 .feeds {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
+/* inicio taller diapo */
+#slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(10% * 7); /* Importante: Ancho total para 7 imágenes */
+
+}
+
+#slides img {
+    width: auto;
+    height: auto;
+}
+
+.buttoninfo:hover {
+    opacity: 1;
+}
+.divtecomp {
+    display: flex;
+    flex-direction: row;
+}
+.divtecomp img {
+    display: flex;
+    width: 450px;
+    height: auto;
+    margin: 10px 10px;
+    border-radius: 30px;
+    mask-image: linear-gradient( #1f2937 80%, transparent );
+
+}
+
+
+/*  fin taller diato */
+
 
 
 

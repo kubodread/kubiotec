@@ -135,3 +135,107 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const botonesVerMas = document.querySelectorAll('.cuadrofinbproductosdiato');
+    const productoinfodiatoDiv = document.getElementById('productoinfodiato');
+
+    botonesVerMas.forEach(boton => {
+        boton.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita la navegación del enlace
+
+            // Realiza la petición para obtener el contenido de productoinfojabon.html
+            fetch('productos/diato.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Inserta el contenido en el div productodiato
+                    productoinfodiatoDiv.innerHTML = data;
+                    productoinfodiatoDiv.style.display ='flex';
+                    // Agrega los event listeners para los botones de cerrar
+                    const cerrarModalButtons = document.querySelectorAll('.info-close-button, .infocerrar');
+                    cerrarModalButtons.forEach(cerrarBoton => {
+                        cerrarBoton.addEventListener('click', function() {
+                            productoinfodiatoDiv.style.display ='none';
+                            productoinfodiatoDiv.innerHTML = ''; // Limpia el contenido del div para cerrar
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al cargar productodiatomea.html:', error);
+                    productoinfodiatoDiv.innerHTML = '<p>Error al cargar la información del producto.</p>';
+                    productoinfodiatoDiv.style.display ='block';
+                });
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const botonesVerMas = document.querySelectorAll('.cuadrofinbproductosmma');
+    const productoinfommaDiv = document.getElementById('productoinfomma');
+
+    botonesVerMas.forEach(boton => {
+        boton.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita la navegación del enlace
+
+            // Realiza la petición para obtener el contenido de productoinfojabon.html
+            fetch('productos/mma.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Inserta el contenido en el div productomma
+                    productoinfommaDiv.innerHTML = data;
+                    productoinfommaDiv.style.display ='flex';
+                    // Agrega los event listeners para los botones de cerrar
+                    const cerrarModalButtons = document.querySelectorAll('.info-close-button, .infocerrar');
+                    cerrarModalButtons.forEach(cerrarBoton => {
+                        cerrarBoton.addEventListener('click', function() {
+                            productoinfommaDiv.style.display ='none';
+                            productoinfommaDiv.innerHTML = ''; // Limpia el contenido del div para cerrar
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al cargar productodiatomea.html:', error);
+                    productoinfommaDiv.innerHTML = '<p>Error al cargar la información del producto.</p>';
+                    productoinfommaDiv.style.display ='block';
+                });
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const botonesVerMas = document.querySelectorAll('.cuadrofinbproductosmulti');
+    const productoinfomultiDiv = document.getElementById('productoinfomulti');
+
+    botonesVerMas.forEach(boton => {
+        boton.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita la navegación del enlace
+
+            // Realiza la petición para obtener el contenido de productoinfojabon.html
+            fetch('productos/multi.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Inserta el contenido en el div productomulti
+                    productoinfomultiDiv.innerHTML = data;
+                    productoinfomultiDiv.style.display ='flex';
+                    // Agrega los event listeners para los botones de cerrar
+                    const cerrarModalButtons = document.querySelectorAll('.info-close-button, .infocerrar');
+                    cerrarModalButtons.forEach(cerrarBoton => {
+                        cerrarBoton.addEventListener('click', function() {
+                            productoinfomultiDiv.style.display ='none';
+                            productoinfomultiDiv.innerHTML = ''; // Limpia el contenido del div para cerrar
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al cargar productomultimineral.html:', error);
+                    productoinfomultiDiv.innerHTML = '<p>Error al cargar la información del producto.</p>';
+                    productoinfomultiDiv.style.display ='block';
+                });
+        });
+    });
+});
