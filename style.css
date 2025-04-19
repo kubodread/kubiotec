@@ -270,9 +270,9 @@
 
     
 
-    #principaln{
+    /* #principaln{
 
-    }
+    } */
     .titulonoticias {
         display: flex;
         width: 100%;
@@ -285,9 +285,9 @@
         text-align: center;
     }
 
-    #noticiasbarra{
+    /* #noticiasbarra{
 
-    }
+    } */
 
     .barranotis{
         display: flex;
@@ -749,9 +749,6 @@ img.lombriprocarrusel{
         outline-color: rgba(49, 138, 172, 0);
         outline-offset: 80px;
         text-shadow: 1px 1px 6px #fff;
-        border-shadow: 
-    
-        
         }
 
 
@@ -837,7 +834,6 @@ img.lombriprocarrusel{
                 outline-color: rgba(49, 138, 172, 0);
                 outline-offset: 80px;
                 text-shadow: 1px 1px 6px #fff;
-                border-shadow: 
             }
 
 
@@ -1130,7 +1126,6 @@ transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 outline-color: rgba(49, 138, 172, 0);
 outline-offset: 80px;
 text-shadow: 1px 1px 6px #fff;
-border-shadow:   
 }
 
 
@@ -1430,12 +1425,11 @@ button.infocerrarcv {
         height: 360px;
         margin:30px;
         border-radius: 6px;
-        background: ;
+        /* background: ; */
     }
     #imgheaderbio {
         mask-image: linear-gradient( #1f2937 40%, transparent );
         transition:all .5s ease-in-out;
-
     }
 
     .contenedor#imgheaderbio:hover{
@@ -1883,7 +1877,6 @@ img.figtkubimg:hover {
     outline-color: rgba(49, 138, 172, 0);
     outline-offset: 80px;
     text-shadow: 1px 1px 6px #fff;
-    border-shadow:   
     }
 
 
@@ -2005,13 +1998,13 @@ img.figtkubimg:hover {
         outline-color: rgba(49, 138, 172, 0.4);
     transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
     }
-            .cuadrofinbproductos:hover {
-                box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
-                outline-color: rgba(49, 138, 172, 0);
-                outline-offset: 80px;
-                text-shadow: 1px 1px 6px #fff;
-                border-shadow: 
-            }
+
+    .cuadrofinbproductos:hover {
+         box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+         outline-color: rgba(49, 138, 172, 0);
+         outline-offset: 80px;
+         text-shadow: 1px 1px 6px #fff;
+     }
            
 
     #imgfin {
@@ -2074,9 +2067,6 @@ img.figtkubimg:hover {
     outline-color: rgba(49, 138, 172, 0);
     outline-offset: 80px;
     text-shadow: 1px 1px 6px #fff;
-    border-shadow: 
-
-    
     }
 
 
