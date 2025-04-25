@@ -56,6 +56,14 @@ function setTutorialk(){
                     para.innerHTML = data;
                     });
                 break;
+        case "Lombricompostaje":
+             fetch('tutorial/lombri.html')
+                  .then(response => response.text())
+                  .then(data => {
+                       para.innerHTML = data;
+                      });
+              break;
+
         case "tecomposta":
             fetch('tutorial/tecomposta.html')
                 .then(response => response.text())

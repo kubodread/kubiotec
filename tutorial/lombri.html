@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lombricompostaje</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section {
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .title {
+            text-align: center;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin-bottom: 20px;
+        }
+        .data-table {
+            width: auto;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.8em;
+        }
+        .data-table th {
+            background-color: #f0f0f0;
+        }
+        .text-block {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+        .source {
+            text-align: center;
+            font-style: italic;
+            font-size: 0.8em;
+        }
+        @media (max-width: 600px) {
+            .data-table {
+                font-size: 0.7em;
+            }
+        }
+
+    
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section {
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .table-container {
+            width: 100%;
+            overflow-x: auto; /* Para tablas que puedan ser más anchas que el contenedor */
+            margin-bottom: 20px;
+        }
+        .data-table {
+            width: auto;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+        .data-table th, .data-table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: center;
+            font-size: 0.8em;
+        }
+        .data-table th {
+            background-color: #f0f0f0;
+        }
+        .optimal-range {
+            background-color: #d9d9d9;
+        }
+      
+        .tool-info {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+        .tool-image {
+            flex-shrink: 0;
+        }
+        .tool-list {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .tool-list li {
+            margin-bottom: 5px;
+        }
+        @media (max-width: 600px) {
+            .data-table {
+                font-size: 0.7em;
+            }
+         
+            .tool-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            .tool-image {
+                margin-bottom: 10px;
+            }
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            align-content: flex-start;
+        }
+        .section {
+            margin-bottom: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .title {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .centered-image {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .contact-info {
+            text-align: center;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+        .quote {
+            text-align:right;
+            font-style: italic;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .image-text-block {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .image-text-block img {
+            margin-right: 15px;
+        }
+        .list-section ol {
+            padding-left: 20px;
+        }
+        .list-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .list-item img {
+            margin-right: 10px;
+        }
+        .important-considerations {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .consideration {
+            margin-bottom: 10px;
+        }
+        .inline-images {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .inline-images img {
+            margin-right: 10px;
+        }
+        .labeled-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .labeled-image {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .labeled-image img {
+            margin-bottom: 5px;
+        }
+        @media (max-width: 600px) {
+            .image-text-block {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-text-block img {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+        .triangle-container {
+            position: relative;
+            width: 300px; /* Ajusta el tamaño según necesites */
+            height: 260px; /* Ajusta la altura según necesites */
+            margin: 50px auto;
+        }
+
+        .triangle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;
+            border-right: 150px solid transparent;
+            border-bottom: 260px solid #f00; /* Color rojo como en la imagen */         
+            animation:beat 1s infinite alternate ease-in-out;
+
+        }
+        @keyframes beat{
+  to{
+    transform:  scale(1.25);
+  }
+}
+        .text-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .top-text {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px;
+            background-image: linear-gradient(180deg, #ff0000ab 10%, #006bcf98 90%);
+            border: 1px solid;
+            border-radius: 20px 40px;
+        }
+
+        .bottom-left-text {
+            position: absolute;
+            bottom: -20px;
+            left: -50px;
+            padding: 15px;
+            background-image: linear-gradient(180deg, #2389ffe5 0%, #0e658db7 80%);
+            border: 1px solid;
+            border-radius: 1px 70px 50px 90px ;
+      
+        }
+
+        .bottom-right-text {
+            position: absolute;
+            bottom: -20px;
+            right: -50px;
+            padding: 15px;
+            background-image: linear-gradient(90deg, #9dc0ce 0%, #0aaffc79 100%);
+            border: 1px solid;
+            border-radius: 1px 70px;
+      
+        }
+
+        .center-text {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            line-height: 1.2;
+            text-align: center;
+            background-image: linear-gradient(90deg, #ffd103 0%, #8163f079 100%);
+            border-radius: 80%;
+            padding: 15px;
+        }
+
+        .center-text strong {
+            font-size: 1.5em;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="container textocont2">
+    <div class="container">
+        <div class="section title-section">
+            <h1 class="title titulocarru">Lombricomposteo</h1>
+            
+            </div>
+
+        <div class="textocont2">
+        <div class="coljuntas">
+             <div class="colcol section centered-image">
+               <div>
+                   <p class="title"><strong> Con </strong><i> Eisenia foetida</i> <i>(Savigny)</i>.</p>
+               </div> 
+                <div  class="tutocontimg">
+                    <img id="imgheaderbio" src="./images/lombriznucleo.jpg" alt="Imagen Lombriz">
+                </div>
+            </div>
+               <div class="seccion section quote">
+                    <p>“<i>El arado es una de las más antiguas y útiles invenciones del hombre, pero mucho antes de que él existiera, la tierra era arada regular y continuamente por las lombrices. Probablemente el hombre; reconocerá un día la gigantesca obra que realizan estos anélidos”</i> <b><br/></b> <i><u><b>Charles Darwin.</b></u></i></p>
+                </div>
+        </div>
+
+        </div>
+
+
+      
+
+     
+
+       
+
+        <div class="">
+            <h2 class="titulocarru">Pasos para iniciar tu Lombricompostero:</h2>
+            <div class="">
+              <div class="coljuntas">  
+                <div class="colcol">
+                    <div style="margin: 5px; padding: 10px; border: 1px solid gray; border-radius: .5em 1.5em;">
+                        <h3 class="titulocarru">Herramientas:</h3>
+                        
+                        <ul class="tool-list">
+                        <li>Palas</li>
+                        <li>Rastrillos o bieldo</li>
+                        <li>Regaderas</li>
+                        <li>Cubetas</li>
+                        <li>Base de madera para la cubeta</li>
+                        <li>Kit de jardinería</li>
+                        </ul>
+                        
+                    </div>
+                 
+                 </div>
+
+                <div class="colcol">
+                    <div>
+                        <p>Iniciamos por la separación básica:</p> 
+                    </div>
+                    <div>
+                        <img class="tutoinfo" src="./tutorial/tuto/residuos.webp" alt="Imagen Preparación Residuos">
+                    </div>
+                </div>
+                        
+             
+                </div>
+
+
+
+
+
+               <ol>
+                <li class="list-item">
+                <div class="">
+                    <div class="alineacionmovil efeimgheaderv">
+                    <img id="imgtutor" src="./tutorial/tuto/comida1.webp" alt="Imagen Preparación Residuos" >
+                    <img id="imgtutor" src="./tutorial/tuto/comida2.webp" alt="Imagen Preparación Residuos" >
+                    <img id="imgtutor" src="./tutorial/tuto/comida3.webp" alt="Imagen Preparación Residuos" >
+                    <img id="imgtutor" src="./tutorial/tuto/comida4.webp" alt="Imagen Preparación Residuos" >
+                    </div>
+                    <p><b>Preparar el residuo orgánico y triturarlo o picarlo (mientras más picada mejor) para facilitarle el trabajo a la lombriz.</b></p>
+                      
+                    <div class="inline-images divtecomp  ">
+                        <img class="expande"   src="./tutorial/tuto/lombri1.webp" alt="Imagen Agregando Residuos">
+                     </div>  
+                    <div>
+                        <p><b>Hacer espacio en el lombricompostero y agregar los residuos orgánicos, y cubrirlos con tierra.</b></p>
+                    </div>
+                    
+                     <div class="inline-images divtecomp ">
+                        <img class="expande"   src="./tutorial/tuto/lombri4.webp" alt="Imagen cubriendo Residuos">
+                     </div>  
+                         
+                   
+                </div>
+                </li>
+                <li class="list-item"> 
+            
+                </li>    
+                <li class="list-item">    
+                <div>
+                    <div>
+                    <p><b>Asperjar o hidratar si es necesario (recuerda monitorear), cubrir o tapar para evitar entrada de luz, exceso de agua, moscas y depredadores.</b></p>
+                    </div>
+                
+                    <div class="inline-images divtecomp">
+                        <img class="expande" src="./tutorial/tuto/aire2.webp" alt="Imagen Humus Cosechado" >
+                    </div>
+                </div>    
+                </li>
+                <li class="list-item">  
+                    <div>  
+                    <p><b>Cosecha el humus que se genera en la parte superior, recoléctala con el rastrillo de tres dientes y la palita.</b></p>
+                    </div>
+                </li>
+                </ol> 
+
+            </div>
+            
+            
+        </div>
+
+        <div class="section important-considerations">
+            <h2 class="title titulocarru">Para tener éxito debes considerar:</h2>
+            <div class="textocont2">
+            <p class="consideration">A la Lombriz no le agrada la luz, protégela.</p>
+            <p class="consideration">El lombricompostero debe tener buen dren de líquidos (lixiviado), este mismo lo puedes recolectar y aplicar como abono líquido (Recomendado del 5 al 10% en agua).</p>
+        </div>
+        </div>
+        <div class="alineacionmovil">
+    <div class=" triangle-container">
+        <div class="triangle"></div>
+        <div class="top-text">TEMPERATURA</div>
+        <div class="bottom-left-text">HUMEDAD</div>
+        <div class="bottom-right-text">AIREACIÓN</div>
+        <div class="center-text">
+            <strong>pH</strong><br>
+            ALIMENTACIÓN<br>
+            ADECUADA
+        </div>
+    </div>            
+        </div>
+
+
+
+
+    <div class="container">
+        <div class="section table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Parámetro</th>
+                        <th>Muerte</th>
+                        <th>Letargo</th>
+                        <th colspan="2" class="optimal-range">Rango V. óptimo</th>
+                        <th>Letargo</th>
+                        <th>Muerte</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>pH &gt;</td>
+                        <td>&lt; 5</td>
+                        <td>&lt; 6,5</td>
+                        <td class="optimal-range">6, 8-8</td>
+                        <td class="optimal-range">7,5</td>
+                        <td>&gt; 8,5</td>
+                        <td>&gt; 9</td>
+                    </tr>
+                    <tr>
+                        <td>Humedad %</td>
+                        <td>&lt; 50</td>
+                        <td>&lt; 75</td>
+                        <td class="optimal-range">80-85</td>
+                        <td class="optimal-range">82</td>
+                        <td>&gt; 88</td>
+                        <td>&gt; 90</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7"><i>E. foetida</i></td>
+                    </tr>
+                    <tr>
+                        <td>Temp °C</td>
+                        <td>0</td>
+                        <td>&lt; 7</td>
+                        <td class="optimal-range">14-27</td>
+                        <td class="optimal-range">20</td>
+                        <td>&gt; 33</td>
+                        <td>&gt; 42</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+      
+    </div>
+
+
+
+
+
+
+
+    <div class="container">
+
+        <div class="textocont2 image-text-block">
+            <div>
+                <p><b>Alimentación adecuada:</b><br/>
+                <b>Residuos orgánicos</b> como resto de frutas, verduras. En el caso de Cítricos se requiere Fermentación previa remojados en agua mínimo una semana. (hojarasca o podas evitar colocarlo en lombricompostero).<br/>
+                <b>Estiércoles animales</b> (vacunos, equinos, caprinos, porcinos, ovinos, conejos, aves, etc). Fermentación requerida de entre 10 a 15 días y de 30 y 45 días (conejos y gatos). De canino fresca es mejor.</p>
+            </div>
+              <div class="section">
+                <p><u><b>Que no debo agregar:</b></u><br/>
+                Restos de comida, residuos con grasas, productos lácteos, carnes en descomposición, huesos, viceras, papel con tintas, plásticos, maderas procesadas, productos químicos, agua con cloro, insecticidas, estiércoles frescos inadecuados, arena, cal, vinagre y cascara de huevo.</p>
+            </div>
+        </div>
+
+        <div class="section centered-image">
+        </div>
+
+        <div class="section">
+            <h2 class="title titulocarru">Aplicación del humus de lombriz</h2>
+            <div class="textocont2">
+            <div>
+            <p><b>Macetas:</b> una capa de 2cm. sobre la tierra, dejando libre el tallo de la planta, para evitar el desarrollo de hongos.</p>
+            <p>En el caso de un trasplante, se recomienda una parte por cada cuatro de tierra (1:4). Regar moderadamente al aplicar. Los mejores momentos para abonar son al comienzo de cada estación y agregar dos cucharadas por mes.</p>
+            <p><b>Canteros:</b> 3cm de grosor de abono en la cazuela de cada planta.</p>
+            <p>Se riega al momento de aplicar y luego, según las necesidad de cada ejemplar.</p>
+            <p><b>Césped:</b> abonar con 1,5 dm3 (1.5 litros) por metro cuadrado, en otoño y primavera.</p>
+            <p><b>Rosales y leñosas:</b> en otoño y primavera, 1,5 dm3 (1.5 litros) por planta.</p>
+            <p><b>Plantas aromáticas:</b> agregar dos partes por cada tres de tierra (2:3), regándolo posteriormente.</p>
+            <p><b>Frutales:</b> aproximado de entre 2 y 3 dm3 (2 a 3 Litros), con una frecuencia mensual.</p>
+            <p><b>Hortalizas:</b> de 2 a 4 veces en cada ciclo, colocar 1 cucharada por planta.</p>
+            </div>
+        </div>
+        </div>
+
+
+        <div class="section">
+            <h2 class="title titulocarru">Beneficio en la germinación y desarrollo de las plantas que aporta la Lombricomposta</h2>
+        </div>
+
+        <div class="section table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Fitohormonas</th>
+                        <th>Nivel</th>
+                        <th>µg equiv. / g seco</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left;">Citoquininas (IPA)</td>
+                        <td>Medio</td>
+                        <td>0.80 – 1.22</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Giberelinas</td>
+                        <td>Medio</td>
+                        <td>1.80 – 2.75</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Auxinas</td>
+                        <td>Medio</td>
+                        <td>1.80 – 3.80</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="source">(Tomado de Grappelli, Galli y Tomat, 1987)</p>
+        
+        <div class="textocont2 section text-block">
+            <p>Las <b>citoquininas o citocininas</b> así como las <b>auxinas y giberelinas</b> son un grupo de hormonas que se encuentran en los vegetales, se sabe que promueven la división y la diferenciación celular, se forman en cualquier tejido vegetal dando lugar al desarrollo de tallos, raíces, hojas, flores, frutos o semillas.</p>
+        </div>
+        </div>
+
+        
+
+        <div class="section">
+            <h2 class="title titulocarru">Microorganismos que aporta la lombricomposta al ser aplicados al suelo</h2>
+        </div>
+
+        <div class="section table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Microorganismos</th>
+                        <th>Nivel</th>
+                        <th>µg equiv./g seco</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="text-align: left;">Bacterias del suelo</td>
+                        <td>Alto</td>
+                        <td>110 millones</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Actinomorfos</td>
+                        <td>Medio</td>
+                        <td>3,100 millones</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Hongos</td>
+                        <td>Medio</td>
+                        <td>10,700 millones</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="text-align: center;">Población bacteriana específica para los ciclos de C, N, y P</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Bacterias celulolíticas</td>
+                        <td>Células/gramo</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Bacterias que degradan almidón</td>
+                        <td>Células/gramo</td>
+                        <td>8,450 millones</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Bacterias amino-oxidantes</td>
+                        <td>Células/gramo</td>
+                        <td>1.40 millones</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Bacterias nitro-oxidantes</td>
+                        <td>Células/gramo</td>
+                        <td>1.40 millones</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Bacterias nitrofijadoras libres</td>
+                        <td>Células/gramo</td>
+                        <td>45</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left;">Bacterias solubilizadoras de fósforo</td>
+                        <td>Células/gramo</td>
+                        <td>1,350</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="source">(Tomada de Velazco y Fernández, 1989)</p>
+        </div>
+    </div>
+
+
+
+
+
+</div>    
+</body>
+</html>
