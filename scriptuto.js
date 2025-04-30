@@ -1,91 +1,91 @@
-// inicio de selección de tutorial
-function inicioTuto () {
+// // inicio de selección de tutorial
+// function inicioTuto () {
 
 
     
 
 
-const select = document.querySelector("select");
-const para = document.querySelector(".tutorialk");
+// const select = document.querySelector("select");
+// const para = document.querySelector(".tutorialk");
 
-select.addEventListener("change", setTutorialk);
+// select.addEventListener("change", setTutorialk);
 
-function setTutorialk(){
-    const choice = select.value;
+// function setTutorialk(){
+//     const choice = select.value;
 
-    switch (choice){
-        case "phcasero":
-            fetch('tutorial/phsuelo.html')
-                .then(response => response.text())
-                .then(data => { 
-                    para.innerHTML = data;
-                });
-            break;
-        case "phtiras":
-            fetch('tutorial/phtiras.html')
-                .then(response => response.text())
-                .then(data => { 
-                    para.innerHTML = data;
-                });
-            break;
-        case "corregirph":
-            fetch('tutorial/corregirph.html')
-                .then(response => response.text())
-                .then(data => {
-                    para.innerHTML = data;
-                });
-            break;
-        case "diatoap":
-            fetch('tutorial/diatomeas.html')
-                .then(response => response.text())
-                .then(data => {
-                    para.innerHTML = data;
-                });
-            break;
-        case "liberarocafosfo":
-            fetch('tutorial/fosfolibre.html')
-                .then(response => response.text())
-                .then(data => {
-                    para.innerHTML = data;
-                });
-            break;
-        case "compostaje":
-              fetch('tutorial/compostaje.html')
-                .then(response => response.text())
-                 .then(data => {
-                    para.innerHTML = data;
-                    });
-                break;
-        case "Lombricompostaje":
-             fetch('tutorial/lombri.html')
-                  .then(response => response.text())
-                  .then(data => {
-                       para.innerHTML = data;
-                      });
-              break;
+//     switch (choice){
+//         case "phcasero":
+//             fetch('tutorial/phsuelo.html')
+//                 .then(response => response.text())
+//                 .then(data => { 
+//                     para.innerHTML = data;
+//                 });
+//             break;
+//         case "phtiras":
+//             fetch('tutorial/phtiras.html')
+//                 .then(response => response.text())
+//                 .then(data => { 
+//                     para.innerHTML = data;
+//                 });
+//             break;
+//         case "corregirph":
+//             fetch('tutorial/corregirph.html')
+//                 .then(response => response.text())
+//                 .then(data => {
+//                     para.innerHTML = data;
+//                 });
+//             break;
+//         case "diatoap":
+//             fetch('tutorial/diatomeas.html')
+//                 .then(response => response.text())
+//                 .then(data => {
+//                     para.innerHTML = data;
+//                 });
+//             break;
+//         case "liberarocafosfo":
+//             fetch('tutorial/fosfolibre.html')
+//                 .then(response => response.text())
+//                 .then(data => {
+//                     para.innerHTML = data;
+//                 });
+//             break;
+//         case "compostaje":
+//               fetch('tutorial/compostaje.html')
+//                 .then(response => response.text())
+//                  .then(data => {
+//                     para.innerHTML = data;
+//                     });
+//                 break;
+//         case "Lombricompostaje":
+//              fetch('tutorial/lombri.html')
+//                   .then(response => response.text())
+//                   .then(data => {
+//                        para.innerHTML = data;
+//                       });
+//               break;
 
-        case "tecomposta":
-            fetch('tutorial/tecomposta.html')
-                .then(response => response.text())
-                .then(data => {
-                    para.innerHTML = data;
-                    inicializarCarruselTeComposta();
+//         case "tecomposta":
+//             fetch('tutorial/tecomposta.html')
+//                 .then(response => response.text())
+//                 .then(data => {
+//                     para.innerHTML = data;
+//                     inicializarCarruselTeComposta();
 
-                          });
-                      break;
-         case "liberarocalcio":
-            fetch('tutorial/cascarahuevo.html')
-                .then(response => response.text())
-                .then(data => {
-                    para.innerHTML = data;
-                    inicializarCarruselTeComposta();
-                            });
-                       break;
-        default:
-            para.textContent ="selecciona un tutorial";
-    }
-}
-}
+//                           });
+//                       break;
+//          case "liberarocalcio":
+//             fetch('tutorial/cascarahuevo.html')
+//                 .then(response => response.text())
+//                 .then(data => {
+//                     para.innerHTML = data;
+//                     inicializarCarruselTeComposta();
+//                             });
+//                        break;
+//         default:
+//             para.textContent ="selecciona un tutorial";
+//     }
+// }
+// }
 
 
 // Función para inicializar el carrusel de té de composta
@@ -126,5 +126,25 @@ function inicializarCarruselTeComposta() {
 }
 
 // Llama a inicioTuto cuando el script se carga
-inicioTuto();
+// inicioTuto();
 
+const tutorialesDiv = document.querySelector('.tutoriales'); // Asegúrate de que este div exista en tu index.html
+
+function cargarTutorial(id) {
+    fetch(`tutorial/${id}.html`)
+        .then(response => response.text())
+        .then(data => {
+            if (tutorialesDiv) {
+                tutorialesDiv.innerHTML = data;
+            
+            } else {
+                console.error("El div con la clase 'tutoriales' no se encontró en el index.html");
+            }
+        })
+        .catch(error => {
+            console.error("Error al cargar el tutorial:", error);
+            if (tutorialesDiv) {
+                tutorialesDiv.innerHTML = "<p>Error al cargar el contenido.</p>";
+            }
+        });
+}
