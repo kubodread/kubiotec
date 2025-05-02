@@ -1,134 +1,46 @@
-// // inicio de selección de tutorial
-// function inicioTuto () {
 
 
-    
+const tutorialesDiv = document.querySelector('.tutoriales'); // Asegúrate de que este div exista en tu index.html
 
+function addElement() {
 
-// const select = document.querySelector("select");
-// const para = document.querySelector(".tutorialk");
+    const existingRegresarDiv = document.getElementById("divregresar");
 
-// select.addEventListener("change", setTutorialk);
-
-// function setTutorialk(){
-//     const choice = select.value;
-
-//     switch (choice){
-//         case "phcasero":
-//             fetch('tutorial/phsuelo.html')
-//                 .then(response => response.text())
-//                 .then(data => { 
-//                     para.innerHTML = data;
-//                 });
-//             break;
-//         case "phtiras":
-//             fetch('tutorial/phtiras.html')
-//                 .then(response => response.text())
-//                 .then(data => { 
-//                     para.innerHTML = data;
-//                 });
-//             break;
-//         case "corregirph":
-//             fetch('tutorial/corregirph.html')
-//                 .then(response => response.text())
-//                 .then(data => {
-//                     para.innerHTML = data;
-//                 });
-//             break;
-//         case "diatoap":
-//             fetch('tutorial/diatomeas.html')
-//                 .then(response => response.text())
-//                 .then(data => {
-//                     para.innerHTML = data;
-//                 });
-//             break;
-//         case "liberarocafosfo":
-//             fetch('tutorial/fosfolibre.html')
-//                 .then(response => response.text())
-//                 .then(data => {
-//                     para.innerHTML = data;
-//                 });
-//             break;
-//         case "compostaje":
-//               fetch('tutorial/compostaje.html')
-//                 .then(response => response.text())
-//                  .then(data => {
-//                     para.innerHTML = data;
-//                     });
-//                 break;
-//         case "Lombricompostaje":
-//              fetch('tutorial/lombri.html')
-//                   .then(response => response.text())
-//                   .then(data => {
-//                        para.innerHTML = data;
-//                       });
-//               break;
-
-//         case "tecomposta":
-//             fetch('tutorial/tecomposta.html')
-//                 .then(response => response.text())
-//                 .then(data => {
-//                     para.innerHTML = data;
-//                     inicializarCarruselTeComposta();
-
-//                           });
-//                       break;
-//          case "liberarocalcio":
-//             fetch('tutorial/cascarahuevo.html')
-//                 .then(response => response.text())
-//                 .then(data => {
-//                     para.innerHTML = data;
-//                     inicializarCarruselTeComposta();
-//                             });
-//                        break;
-//         default:
-//             para.textContent ="selecciona un tutorial";
-//     }
-// }
-// }
-
-
-// Función para inicializar el carrusel de té de composta
-function inicializarCarruselTeComposta() {
-    const slides = document.querySelector('#slides'); // Usar ID ya que en tecomposta.html es 'slides'
-    const images = document.querySelectorAll('#slides img');
-    const botonAnterior = document.getElementById('anteriorte');
-    const botonSiguiente = document.getElementById('siguientete');
-
-    let currentIndex = 0;
-    const totalImages = images.length;
-
-    if (botonSiguiente) { // Verificar si el botón existe antes de agregar el listener
-        botonSiguiente.addEventListener('click', () => {
-            currentIndex++;
-            if (currentIndex >= totalImages) {
-                currentIndex = 0;
-            }
-            updateSliderTeComposta();
-        });
+    // Si existe, lo elimina
+    if (existingRegresarDiv) {
+        existingRegresarDiv.remove();
     }
 
-    if (botonAnterior) { // Verificar si el botón existe antes de agregar el listener
-        botonAnterior.addEventListener('click', () => {
-            currentIndex--;
-            if (currentIndex < 0) {
-                currentIndex = totalImages - 1;
-            }
-            updateSliderTeComposta();
-        });
-    }
 
-    function updateSliderTeComposta() {
-        if (slides) { // Verificar si el contenedor slides existe
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
+    // crea un nuevo div
+    var newDiv = document.createElement("div");
+
+    newDiv.id = "divregresar";
+
+    // Define el contenido HTML que quieres insertar
+    var htmlContent = `
+      <div class="flexinfobuttoncv">
+        <button class="infocerrarcv"> ↩️ Más Tutoriales</button>
+      </div>
+    `;
+
+    // Asigna el HTML al innerHTML del nuevo div
+    newDiv.innerHTML = htmlContent;
+
+    // añade el elemento creado y su contenido al DOM
+    var currentDiv = document.getElementById("tutori");
+    // Asegúrate de que 'tutori' sea el ID del elemento donde quieres insertar el botón de regreso
+    if (currentDiv) {
+        currentDiv.appendChild(newDiv); // Usa appendChild si quieres añadirlo *dentro* del div 'tutori'
+        // O document.body.insertBefore(newDiv, currentDiv); si quieres insertarlo *antes*
+    } else {
+        console.error("El elemento con ID 'tutori' no se encontró en el index.html");
     }
 }
 
-// Llama a inicioTuto cuando el script se carga
-// inicioTuto();
 
-const tutorialesDiv = document.querySelector('.tutoriales'); // Asegúrate de que este div exista en tu index.html
+
+// const tutorialesDiv = document.querySelector('.tutoriales'); // Asegúrate de que este div exista en tu index.html
 
 function cargarTutorial(id) {
     fetch(`tutorial/${id}.html`)
@@ -136,7 +48,31 @@ function cargarTutorial(id) {
         .then(data => {
             if (tutorialesDiv) {
                 tutorialesDiv.innerHTML = data;
-            
+                document.getElementById("tutomenu").style.display = "none";
+                addElement();
+
+
+
+
+
+
+          
+                const cerrarModalButtons = document.querySelectorAll('.info-close-button, .infocerrarcv');
+                cerrarModalButtons.forEach(cerrarBoton => {
+                    cerrarBoton.addEventListener('click', function() {
+                        document.getElementById("tutomenu").style.display ='';
+                       
+                        tutorialesDiv.innerHTML = ''; // Limpia el contenido del div para cerrar
+                                        // Elimina el div de regresar al cerrar
+                                        const regresarDivToRemove = document.getElementById("divregresar");
+                                        if (regresarDivToRemove) {
+                                            regresarDivToRemove.remove();
+                                        }
+
+                    });
+                });
+
+
             } else {
                 console.error("El div con la clase 'tutoriales' no se encontró en el index.html");
             }
@@ -148,3 +84,4 @@ function cargarTutorial(id) {
             }
         });
 }
+

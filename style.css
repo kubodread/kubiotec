@@ -713,7 +713,7 @@ img.lombriprocarrusel{
         color:#f9faf8;
     }
     button.buttoninfo {
-        background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgba(31,41,55,1) 60%);
+        background: linear-gradient(0deg, rgba(56, 130, 246, 1) 0%, rgb(148 192 255) 60%);
         /* background-color: #abc937; */
         border-radius: .4em;
         border-color:#000000;
@@ -1962,7 +1962,17 @@ img.figtkubimg:hover {
         border-radius: 15px;
     }
 
-
+    .textfproductoslombcar {background: #c7c7c7;
+        background: linear-gradient(90deg,rgba(199, 199, 199, 1) 0%, rgba(56, 130, 246, 1) 100%);
+        text-align: justify;
+        font-size: 15px;
+        width: auto;
+        height: auto;
+        padding-right: 25px;
+        padding-left: 35px;
+        border-radius: 15px;
+    }
+    
 
     .ulproductos {
         display: flex;
@@ -2017,7 +2027,7 @@ img.figtkubimg:hover {
 
 
     button.buttoninfo {
-        background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgba(31,41,55,1) 60%);
+        background: linear-gradient(0deg, rgba(56, 130, 246, 1) 0%, rgb(148 192 255) 60%);
         /* background-color: #abc937; */
         border-radius: .4em;
         border-color:#000000;
@@ -2520,8 +2530,9 @@ img.figtkubimg:hover {
     display: flex;
 }
 
+div.imgcv,
 .imgcv {
-    width: 900px;
+    width: 40em;
     height: auto;
 }
 
@@ -2579,6 +2590,7 @@ ul.textcvjust{
     text-align: left;
     padding: 0 10px;
     list-style: inside;
+    flex-direction: column;
 }
 a.insta #insta:hover,
  .softcv #insta:hover {
@@ -2700,6 +2712,22 @@ a.insta #insta:hover,
     mask-image: linear-gradient( #1f2937 80%, transparent );
 
 }
+
+/* nueva slider diapo te composta */
+.slidertecomposta{
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.slidertecomposta img {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+  }
 
 
 /*  fin taller diato */

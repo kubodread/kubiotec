@@ -55,11 +55,12 @@
          <!-- <div id="tutorialeslist"></div> -->
 
 
-
- <div class="tutoriales">
+<div id="tutori"></div>
+ <div  class="tutoriales">
         </div>
-  <h2 class="titulocarru">Algunos tutoriales de interés para la salud del suelo y las plantas</h2>
-
+                <div id="tutomenu">
+             <h2 class="titulocarru">Algunos tutoriales de interés para la salud del suelo y las plantas</h2>
+         
          <header>
             <div id="contenedor-botones">
                 </div>
@@ -69,7 +70,7 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('contenedor-botones').innerHTML = data;
-
+                    
                     // document.getElementById('tutorialeslist').innerHTML = data;
                     // inicioTuto();
                 });
@@ -77,7 +78,7 @@
         
         </script>
 
-
+</div>
         
 
     </div>
