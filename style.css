@@ -356,8 +356,11 @@
         flex-wrap: wrap;
         flex-direction: column;
         align-content: center;
+        width: auto;
     }
-
+.tutoriales{
+    width: auto;
+}
 
 
     .titulocarru {
@@ -740,6 +743,20 @@ img.lombriprocarrusel{
         width: 80%;
     }
 
+
+    div.textocont2 div.textocont2 {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding:0px;
+        width: 105%;
+    }
+    div.textocont2 p  {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding:10px;
+    }
     .p1{
         font-style: italic;
         font-size: 15px;
@@ -1274,6 +1291,25 @@ button.infocerrarcv {
 }
 
 /* inicio taller diapo */
+
+
+.slidertecomposta{
+    display: flex;
+    width: 100%;
+    height: auto;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.slidertecomposta img {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+  }
+
+
+
 #slider {
     position: relative;
     width: 100%;
@@ -1311,6 +1347,11 @@ button.infocerrarcv {
     mask-image: linear-gradient( #1f2937 70%, transparent );
 
 }
+
+.container {
+    width: auto;
+}
+
 /*  fin taller diato */
 
 
@@ -1415,7 +1456,7 @@ button.infocerrarcv {
     li{
         display: flex;
         flex-direction: row;
-        list-style: none;
+        list-style: circle;
     }
 
     a {
@@ -1786,6 +1827,17 @@ img.figtkubimg:hover {
     filter: saturate(180%);
 }
 
+div.figt img {
+    filter: sepia(40%);
+
+}
+
+div.figt img:hover {
+    filter: saturate(180%);
+
+}
+
+
     .imgtextkub {
             display: flex;
             border: 3px;
@@ -2035,6 +2087,12 @@ img.figtkubimg:hover {
         font-weight: 900;
     }
 
+    .buttoninfo a{
+        color: #1f2937;
+        padding: 5px;
+
+    }
+
     .listaamigos {
         box-sizing: content-box;
         display: flex;
@@ -2095,6 +2153,11 @@ img.figtkubimg:hover {
     .textocont2 {
         display: flex;
         padding: 20px 20px;
+        flex-direction: column;
+    }
+    div.textocont2  div.textocont2{
+        display: flex;
+        padding: 10px 10px;
         flex-direction: column;
     }
 
@@ -2729,6 +2792,17 @@ a.insta #insta:hover,
     scroll-snap-align: center;
   }
 
+ ol.tutolista {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    text-align: justify ;
+ }
+li.tutolista{
+    display: list-item;
+    text-align: justify ;
+    list-style: decimal ;
+}
 
 /*  fin taller diato */
 
