@@ -1700,12 +1700,12 @@ button.infocerrarcv {
 }
 
 .titulocarru {
-    background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgba(31,41,55,1) 60%);
+    /* background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgba(31,41,55,1) 60%); */
     margin-bottom: 3px;
-    color: #e5e7eb;
-    font-size: 30px;
-    border: 1px solid rgb(87, 87, 87);
-    border-radius: .4em;
+    color: #242424;
+    /* font-size: 30px; */
+    /* border: 1px solid rgb(87, 87, 87); */
+    /* border-radius: .4em; */
     margin: 1px 0 1px 0;
     padding: 5px 10px;
     display: flex;
@@ -1713,6 +1713,9 @@ button.infocerrarcv {
     height: 50px;
     justify-content: center;
     align-items: center;
+    font-size: 3.4vh;
+    font-weight: 700;
+    word-break: break-word;
 }
 img.lombriprocarrusel{
     width: auto;

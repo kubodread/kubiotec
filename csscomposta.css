@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%; /* Ancho fijo o máximo para desktop */
+    color: #333; */
+  
+}
+
+/* inicia efectos */
+/* reset */
+*,
+*::before,
+*::after {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+.cargacomposta {
+    display: flex;
+    background-color: #1F2937;
+    flex-direction: column;
+}
+
+.barratop {
+    background-color: #1F2937;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 1vh 10vw;
+    justify-content: space-between;
+}
+
+.logotextomovil {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logoytext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#logo {
+    display: flex;
+    align-content:flex-start;
+    justify-content: flex-start;
+    width: auto;
+    height: 80px;
+  
+}   
+
+.logotext {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-size: 4vh;
+    color: #f9faf8;
+}
+
+.ultop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 20px;
+    font-size: 2.3vh;
+    list-style: none;
+}
+
+.litop {
+    border: 1px solid #000000;
+    border-radius: 10px;
+    width: 85px;
+    margin: 2px;
+    outline-color: rgba(49, 138, 172, 0.4);
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.litop:hover {
+    border-radius: 0.5em 1.2em;
+    background: #008ac0;
+    color: #fff !important;
+     box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+outline-color: rgba(49, 138, 172, 0);
+outline-offset: 40px;
+text-shadow: 1px 1px 6px #fff;
+
+}
+
+.barratop a {
+    text-decoration: none;
+    color:#e5e7eb;
+    font-size: 18px;
+
+}
+
+.headergeneral a {
+    text-decoration: none;
+    color:#1F2937;
+    font-size: 18px;
+
+}
+
+iframe {
+    height: 80vh;
+}
