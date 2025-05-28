@@ -10,25 +10,115 @@
 
     body {
         display: flex;
+        box-sizing: border-box;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: center; /* Centrar el contenido de la página */
-        width: 80vw; /* Ancho fijo o máximo para desktop */
+        
+        align-items:center; /* Centrar el contenido de la página */
+        width: 100%; /* Ancho fijo o máximo para desktop */
         margin: 10px auto; /* Centrar la página y añadir margen superior/inferior */
-        color: #333;
+        color: #333; */
+
 
     }
 
+    /* inicia efectos */
+    /* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+
+
+/* block-$ */
+.block-effect {
+
+}
+
+.block-reveal {
+  --t: calc(var(--td) + var(--d));
+
+  color: transparent;
+  padding: 4px;
+
+  position: relative;
+  overflow: hidden;
+
+  animation: revealBlock 0s var(--t) forwards;
+}
+
+.block-reveal::after {
+  content: '';
+
+  width: 0%;
+  height: 100%;
+  padding-bottom: 4px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: var(--bc);
+  animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+
+/* animations */
+@keyframes revealBlock {
+  100% {
+    color: #e5e7eb;
+}
+}
+
+@keyframes revealingIn {
+
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes revealingOut {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+
+/* termina efectos */
+
+
+    .form{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
 
 
     .headergeneral {
         background-color: #607899;
         color: #e5e7eb;
-        display: flex;
-        flex-wrap: wrap;
+        width: 100%;
         flex-direction: column;
         align-items: center;
+    }
+    .titulocv.jf {
+        font-size: 3.5vw;
+        font-weight: 700;
+        word-break: break-word;
+        
     }
     .headertexto {
         display: flex;
@@ -41,6 +131,22 @@
 
     }
 
+    #imgheaderbio {
+        width: 60vw;
+        height: auto;
+        margin:10px;
+        border-radius: 70% 20% 100%;
+        border: 2px solid rgb(0, 99, 0);
+        transition: all 1s ;
+    }
+    #imgheaderbio:hover {
+        background: #3f85a1;
+        border-color: #02b337 !important;
+         box-shadow: inset 0 0 20px rgba(45, 113, 139, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    }
+
     #soykubo{
         padding: 0 10px;
         font-size: small;
@@ -48,16 +154,14 @@
         transition: all 2s;
         box-sizing: content-box;
         position:relative;
-        color:#00000000;
+        color:#0000003b;
+        box-sizing: content-box;
         display: none;
-        width: auto;
+        width: 90%;
+        z-index: 10000;
     }
-    .titulocv.jf {
-        font-size: 1.5rem;
-        font-weight: 700;
-        word-break: break-word;
-        
-    }
+
+
     .titulocv {
         margin-top: 10px;
         margin-bottom: -10px;
@@ -66,30 +170,24 @@
         transform: scale(1.8);
     }
 
-    .headertexto h1{
+    .headertexto.soykubo {
         text-align: left;
-        font-size: 48;
+        font-size: 4vw;
         color: #f9faf8;
         font-weight: 900;
     }
-    .textokubiotec {
-        text-align: justify;
-    }
 
-    #imgheaderbio {
-        width: auto;
-        height: 40vh;
-        margin:30px;
-        border-radius: 130vh;
 
-    }
+
+
+
 
     .iniciocv {
         border: 1px solid #607899;
         background: #607899;
         position: relative;
-        width: 80vh;
-        height: 20vh;
+        width: 80%;
+        height: auto;
         margin: 10px;
         justify-content: center;
         align-content: center;
@@ -113,44 +211,6 @@
 
 
 
-
-
-.tutocontimg#imgheaderbio:hover{
-    -webkit-transform:scale(1.3);transform:scale(1.3);
-    border-radius: 100%;
-
-
-}
-.tutocontimg:hover  #imgheaderbio {
-    -webkit-transform:scale(1.3);
-    transform:scale(1.3);
-    border-radius: 100%;
-}
-
-    button.botonheader {
-        color: #1F2937;
-        border: 2px solid #318aac;
-        outline: 1px solid;
-        position: relative;
-        outline-color: rgba(49, 138, 172, 0.4);
-        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-
-    .botonheader:hover {
-        background: #008ac0;
-        color: #fff !important;
-         box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
-    outline-color: rgba(49, 138, 172, 0);
-    outline-offset: 80px;
-    text-shadow: 1px 1px 6px #fff;
-    }
-
-    #menuheader {
-       display: flex;
-       flex-wrap: wrap;
-        gap: 5px;
-    }
-
     .contenido1 {
         padding-top: 5px;
         padding-bottom: 5px;
@@ -163,23 +223,7 @@
         margin-top: -100px;
     }
 
-    .titulocarru {
-        /* background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgb(45, 82, 134) 60%); */
-
-        background: linear-gradient(0deg, rgb(9, 83, 46) 0%, rgb(72, 95, 73) 60%);
-        margin: 3px;
-        color: #e5e7eb;
-        font-size: 30px;
-        border: 1px solid rgb(87, 87, 87);
-        border-radius:.1em .4em;
-        padding: 5px;
-        display: flex;
-        width: inherit;
-        height: auto;
-        justify-content: center;
-        align-items: center;
-    }
-
+   
     .cvdiv1{
         display: flex;
         flex-direction: column;
@@ -191,6 +235,7 @@
         display: flex;
         flex-direction: column;
     }
+
 
     .contenidoscv {
         display: flex;
@@ -205,7 +250,23 @@
         justify-content: center;
     }
 
+    .titulocarru {
+        /* background: linear-gradient(0deg, rgba(56,130,246,1) 0%, rgb(45, 82, 134) 60%); */
 
+        background: linear-gradient(0deg, rgb(9, 83, 46) 0%, rgb(72, 95, 73) 60%);
+        margin: 3px;
+        color: #e5e7eb;
+   
+        border: 1px solid rgb(87, 87, 87);
+        border-radius:.1em .4em;
+        padding: 5px;
+        display: flex;
+        width: inherit;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
 
     .cvcontact1 {
         display: flex;
@@ -229,9 +290,8 @@
     .titulomin {
         /* background: linear-gradient(0deg, rgb(72, 95, 73) 0%, rgba(73, 113, 170, 0.384) 60%); */
         background: #1f2937;
-        margin: 3px;
         color: #e5e7eb;
-        font-size: 30px;
+        font-size: 5vw;
         padding: 5px;
         display: flex;
         width: 100%;
@@ -239,36 +299,72 @@
         justify-content: center;
         align-items: center;
     }
+    
     .cvtxtlat {
         background-color: #f1f1f11f;
         border-radius: 10px;
-        padding: 10px;
+
     }
+    
+    
     .textcvjust {
         background-color: #86868617 transparent 80%;
         padding: 2%;
-        border-radius: 30px;
-        margin: 0 .5in;
+        border-radius: .1in .6in; 
+        margin: .2in .1in;
+        animation-name: textocv ;
+        animation-duration: 2s;
     }
+
+    .textcvjust:hover{
+
+    }
+
+    @keyframes textocv {
+        from {
+            background-color: #13131317 transparent 80%;
+        }
+        to {
+            background-color: #86868617 transparent 80%;
+        }
+    }
+
+
+
+.listacv{
+    text-align:left; 
+    justify-content: 
+    flex-start; 
+    display: flex ; 
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 
     .softcv {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
+  
+
     .cuadrocontact {
         display: flex;
         align-items: center;
-        /* background: #f1f1f11f transparent 40%; */
-        transition: all 0.22s ;
-        width: 100vw;
+        background: #006816c2 transparent 40%; 
+        transition: all 0.822s ;
+        width: 100%;
         justify-content: center;
+        border-radius: 20px;
     }
     .cuadrocontact:hover{
         color: #15191b ;
         background: linear-gradient(0deg,rgba(242, 242, 242, 0.027) 0%, rgb(145, 145, 145) 90%);
+        border-radius: 60% 40px;
+        border:1px #02b337 solid;
     }
     .cuadrocontact h1.titulo2 {
+        font-size:5vw;
         margin: -20px 0;
     }
 
@@ -281,19 +377,14 @@
         transition: all 0.4s ease-in-out 0s;
 
     }
-
+ /*
     li.textcvjust {
         text-align: left;
         padding: 0 10px;
-    }
-    ul.textcvjust{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        text-align: left;
-        padding: 0 10px;
-        list-style: inside;
-        flex-direction: column;
+    }*/
+    .ulicv::before {
+       
+        list-style: circle;
     }
 
     .buttoninfo {
@@ -328,7 +419,7 @@
     .recocv {
         background: #3882f6; 
     }
-
+/*
     .contenido2 {
         display: flex;
         background-color: #ebf2ff;
@@ -355,38 +446,35 @@
         font-weight: 900;
         
     }
-
+*/
     .contenidofininfo {
         display: flex;
-        flex-direction: column-reverse; /* Mantener en fila en desktop */
+        flex-direction: column-reverse; 
         align-items: center;
-        justify-content: space-around; /* Distribuir uniformemente */
+        justify-content: space-around; 
         margin: 10px 5px;
         padding: 10px;
-        width: 80vh;
+        width: 90%;
         background-color: #64646423;
         border-radius: 10px;
     }
+ 
 
     .cuadrofininfo {
-        background-color: #607899;
-        display: flex;
-        flex-direction: column; /* Apilar contenido dentro de cada cuadro */
-        align-items: center;
-        border-radius: 10px;
-        padding: 10px 25px ;
-        margin: 0 15px; /* Espacio entre cuadros */
-        width: 80vh; /* Ancho fijo para cada cuadro */
+
+        width: 80%; 
         color: #fff;
     }
-
+       
     .textcuadro {
         display: flex;
         flex-direction: column;
         text-align: center;
         padding: 0;
-        margin-bottom: 15px;
+
     }
+    
+    /*
     .pc1, .pc2 {
         font-size: 16px;
         padding: 5px 0;
@@ -417,6 +505,8 @@
         border-color: #3882f6;
     }
 
+*/
+
     .contactw {
         font-size: 20px;
         padding: 12px 25px;
@@ -428,7 +518,7 @@
         width: auto;
         text-align: center;
         margin-top: 20px;
-        display: inline-flex; /* Para alinear ícono y texto */
+        display: inline-flex; 
         align-items: center;
         justify-content: center;
     }
@@ -444,12 +534,13 @@
         height: 30px;
         margin-right: 10px;
     }
+
     #insta {
         width: 35px;
         height: 35px;
         margin-right: 10px;
     }
-
+ 
     a.insta #insta:hover,
  .softcv #insta:hover {
     transform: scale(130%,130%);
@@ -461,24 +552,30 @@
     justify-content: center;
     display: flex;
 }
-
+/*
 div.imgcv,
 .imgcv {
     width: 40em;
     height: auto;
 }
+
+*/
+
 #imgfin {
-    width: 40vh;
+    width: 80%;
     height: auto;
     border-radius: 20px;
+    display: flex;
+    justify-content:center;
 }
+
     footer {
         background-color: #1F2937;
         color:#f9faf8;
         padding: 30px;
         text-align: center;
         font-size: 15px;
-        width: 80vh;
+        width: 100%;
         display: flex;
     }
 
@@ -571,6 +668,85 @@ div.imgcv,
         border: 1px solid #ddd; /* Opcional: Un borde sutil para el CV */
         box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Opcional: Sombra suave */
     }
+
+/* inicia efectos */
+    /* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* block-$ */
+.block-effect {
+
+}
+
+.block-reveal {
+  --t: calc(var(--td) + var(--d));
+
+  color: transparent;
+  padding: 4px;
+
+  position: relative;
+  overflow: hidden;
+
+  animation: revealBlock 0s var(--t) forwards;
+}
+
+.block-reveal::after {
+  content: '';
+
+  width: 0%;
+  height: 100%;
+  padding-bottom: 4px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: var(--bc);
+  animation: revealingIn var(--td) var(--d) forwards, revealingOut var(--td) var(--t) forwards;
+}
+
+
+/* animations */
+@keyframes revealBlock {
+  100% {
+    color: #e5e7eb;
+}
+}
+
+@keyframes revealingIn {
+
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes revealingOut {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+}
+
+/* termina efectos */
+
+
 
 
     .barratop {
@@ -675,7 +851,14 @@ div.imgcv,
         padding: 50px;
         border-radius: 1.7in 1in;
     }
-
+    #soykubo::before{
+        font-size: small;
+        background: #55555570;
+        color: white;
+        z-index: 1000;
+        padding: 50px;
+        border-radius: 1.7in 1in;
+    }
     .headertexto h1{
         text-align: left;
         font-size: 48;
@@ -700,10 +883,17 @@ div.imgcv,
         width: auto;
         height: 40vh;
         margin:30px;
-        border-radius: 130vh;
-        ;
+        border-radius: 70% 20% 100%;
+        border: 2px solid rgb(0, 99, 0);
+        transition: all 1s ;
     }
-
+    #imgheaderbio:hover {
+        background: #3f85a1;
+        border-color: #02b337 !important;
+         box-shadow: inset 0 0 20px rgba(45, 113, 139, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    }
     #imgheaderbio {
         mask-image: linear-gradient( #1f2937 40%, transparent );
         transition:all .5s ease-in-out;
@@ -865,6 +1055,12 @@ div.imgcv,
         text-align: center;
     }
 
+    .form.textcvjust.cvtxtlat{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column-reverse;
+    }
+
     .softcv {
         display: flex;
         flex-wrap: nowrap;
@@ -874,13 +1070,16 @@ div.imgcv,
         display: flex;
         align-items: center;
         /* background: #f1f1f11f transparent 40%; */
-        transition: all 0.22s ;
-        width: 100vw;
+        transition: all 0.822s ;
+        width: 100%;
+        border-radius: 20%;
         justify-content: center;
     }
     .cuadrocontact:hover{
         color: #15191b ;
         background: linear-gradient(0deg,rgba(242, 242, 242, 0.027) 0%, rgb(145, 145, 145) 90%);
+        border-radius: 60% 40px;
+        border:1px #02b337 solid;
     }
     .cuadrocontact h1.titulo2 {
         margin: -20px 0;
