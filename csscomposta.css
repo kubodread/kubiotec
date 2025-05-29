@@ -31,13 +31,15 @@
                 display: flex;
                 background-color: #1F2937;
                 flex-direction: column;
+                align-items: center;
+                
             }
 
             .barratop {
                 background-color: #1F2937;
                 display: flex;
                 flex-wrap: nowrap;
-                flex-direction: row;
+                flex-direction: column;
                 padding: 1vh 1.2vw;
                 justify-content: space-between;
             }
@@ -150,9 +152,9 @@
         
         .ultop {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             flex-wrap: wrap;
-            align-items:flex-end;
+            align-items:center;
             align-content: center;
             text-align: center;
             gap: 1px;
