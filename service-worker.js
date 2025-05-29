@@ -1,14 +1,19 @@
 const CACHE_NAME = 'my-pwa-cache-v1';
 const urlsToCache = [
     './',
-    './index.html',
+    './images/logokubiotec.png',
     './compostaje.html',
+    './tutocomapp.html',
+    './tutolistapp.html',
     './productos.html',
     './csscomposta.css',
     './app.js',
+    './scriptuto.js',
+    './preload.js',
     './tiendas.html',
     './tutoriales.html',
     './productos/',
+    './tutorial/',
     './images/icon-192x192.png',
     './images/icon-512x512.png'
     // 'https://composta-control.vercel.app/'

@@ -129,13 +129,374 @@
                 display: flex; width: 100%;
             }
 
-            .headertexto {
-
+            div.headertexto, .menuheader {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
             }
-
-            .botonheader a {
+            div.botonhe {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+            }
+            .botonheader, .botonheader a {
                 font-size: 2.1vh;
+                align-content: center;
+                border: 1px solid #1F2937;
+                border-radius: 4px 1px;
+                padding: 3px;
+                margin: .3em;
             }
+
+            .botonheader:hover{
+                border-radius: 0.5em 1.2em;
+                background: #008ac0;
+                color: #fff !important;
+                box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+            outline-color: rgba(49, 138, 172, 0);
+            outline-offset: 40px;
+            text-shadow: 1px 1px 6px #fff;
+            } 
+            
+            .botonheader a:hover{
+                border-radius: 0.5em 1.2em;
+                background: #1F2937;
+                color: #fff !important;
+                box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+            outline-color: rgba(49, 138, 172, 0);
+            outline-offset: 40px;
+            text-shadow: 1px 1px 6px #fff;
+            }
+
+            /*
+            tutos css
+            */
+
+            .tutoinfo {
+                width: 600px;
+                height: auto;
+                mask-image: linear-gradient( #1f2937 80%, transparent );
+                border-radius: 20px;
+                display: flex;
+                align-content: center;
+            }   
+
+    #tutorialk{
+        background-color: rgba(211, 211, 211, 0.432);
+        display: flex;
+        width:300px;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;  
+    }
+
+    .tutorialk {
+        background-color: rgba(211, 211, 211, 0.432);
+        display: flex;
+        width: auto;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;  
+    }
+
+    .jardin1 {
+        mask-image: linear-gradient( #1f2937 40%, transparent );
+        display: flex;
+    }
+
+
+    #tutorialeslist {
+        display: flex;
+        flex-direction: column ;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    #imgheaderbio {
+        width: 60vw;
+        height: auto;
+        margin:10px;
+        border-radius: 70% 20% 100%;
+        border: 2px solid rgb(0, 99, 0);
+        transition: all 1s ;
+    }
+    #imgheaderbio:hover {
+        background: #3f85a1;
+        border-color: #02b337 !important;
+         box-shadow: inset 0 0 20px rgba(45, 113, 139, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    }
+
+    #imgheaderbio:hover {
+        background: #3f85a1;
+        border-color: #02b337 !important;
+         box-shadow: inset 0 0 20px rgba(45, 113, 139, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+    outline-color: rgba(49, 138, 172, 0);
+    outline-offset: 80px;
+    }
+
+
+    .tutocontimg{
+        display: flex;
+        width: 80%;
+    }
+
+.tutocontimg#imgheaderbio:hover{
+    /* -webkit-transform:scale(1.3);transform:scale(1.3); */
+    border-radius: 100%; 
+}
+.tutocontimg:hover  #imgheaderbio {
+
+    border-radius: 100%;
+}
+
+    .expande {
+  
+        transition:all .5s ease-in-out;
+      }
+      .expande:hover { 
+        width: 100%;
+             -webkit-transform:scale(1.9);transform:scale(1.9);
+             mask-image: linear-gradient( #1f2937 90%, transparent );
+            z-index: 10000;
+      }
+    .textfproductosamigos {
+        background-color: rgba(211, 211, 211, 0.432);
+        text-align: justify;
+        font-size: 15px;
+        width: auto;
+        height: auto;
+        padding-right: 10px;
+        padding-left: 5px;
+    }
+
+    .textfproductoslomb {
+        background-color: rgba(211, 211, 211, 0.432);
+        text-align: justify;
+        font-size: 15px;
+        width: auto;
+        height: auto;
+        padding-right: 10px;
+        padding-left: 5px;
+        border-radius: 15px;
+    }
+
+    .listaamigos {
+        box-sizing: content-box;
+        display: flex;
+        width: auto;
+        flex-wrap: wrap;
+        flex-direction: column;
+        padding: 5px 5px 5px 5px;
+        font-size: 14px;
+        border: 2px solid #ffffff;
+        border-radius: 15px;
+    }
+
+    .titulostutos {
+        background-image: linear-gradient(0deg, rgba(179,179,179,1),rgba(140,140,140,.3));
+        margin-bottom: 2px;
+        border: 1px solid rgb(87, 87, 87);
+        border-radius: .4em;
+        margin: 10px 0 10px 0;
+        padding: 20px 0 20px 0;
+        display: flex;
+        width: 350px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .lituto {
+        display: flex;
+        font-size: 14px;
+        width: auto;
+        border: 0;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .ptutos {
+        padding: 0 15px;
+    }
+
+
+    
+    button.buttoninfo {
+        background: linear-gradient(0deg, rgba(56, 130, 246, 1) 0%, rgb(148 192 255) 60%);
+        /* background-color: #abc937; */
+        border-radius: .4em;
+        border-color:#000000;
+        color:#ffffff;
+        font-weight: 900;
+    }
+    .bottonimage {
+        align-content: center;
+        align-items: center;
+        text-align: center;
+     }
+
+    .contenido2 {
+        display: flex;
+        flex-direction: column;
+        background-color: #ebf2ff;
+        padding: 10px;
+    }
+    .textocont2 {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        align-items: flex-end;
+        padding: 0 20px;
+        width: 80%;
+    }
+    .textoconttuto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: justify;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .textoconttuto img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.textoconttuto div.textoconttuto {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding:10px;
+        width: 90%;
+        align-content: center;
+    }
+    div.textocont2 p  {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        padding:10px;
+    }
+    .p1{
+        font-style: italic;
+        font-size: 15px;
+        color: #1f2937;
+        text-align: justify;
+        padding: 1px;
+        margin-bottom: 2px;
+    }
+
+    .p2 {
+        text-align: right;
+        font-weight: 900;
+        font-size: 12px;
+        padding-right: 20px;
+        padding-top: 5px;
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+
+
+    .textcuadro {
+        color: #f9faf8;
+
+        
+    }
+
+    .contenidofin, .cuadrofin {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        margin: 25px
+    }
+    .tutoriales{
+        width: auto;
+    }
+    
+    
+        .titulocarru {
+            background: linear-gradient(0deg, #3881f66b 0%, rgba(31,41,55,1) 60%);
+            margin-bottom: 3px;
+            color: #e5e7eb;
+            font-size: 30px;
+            font-weight: 900;
+            text-align: center;
+            border: 1px solid rgb(87, 87, 87);
+            border-radius: .4em;
+            margin: 1px 0 1px 0;
+            padding: 5px 10px;
+            display: flex;
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        #imgtutor {
+            width: 230px;
+            height: auto;
+            margin:3px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            border: 1px solid;
+            margin-bottom: 10px;
+            margin-top: 20px;
+        }
+        #imgtutor:hover{
+            transition:all .5s ease-in-out;
+            -webkit-border-radius:100%;
+           
+            transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+         }
+        
+
+
+    /* aquí carrusel */
+    
+    .inicio-carrusel-contenedor {
+        display: flex;
+        overflow-x: hidden; /* Oculta la barra de desplazamiento */
+        width: 400px; /* Asegura que el contenedor ocupe todo el ancho */
+        height: auto;
+      }
+      
+      .iniciocosascarrusel {
+        flex: 0 0 100%; /* Cada elemento ocupa el 100% del ancho */
+        display: flex;
+      }
+    #anterior, #siguiente {
+        height: fit-content;
+    }
+    .botonescarrusel {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    img.lombriprocarrusel{
+        width: auto;
+        height: 300px;
+        border-radius: 10px;
+    }
+    .textfproductoslombcar {
+        background-color: rgba(211, 211, 211, 0.432);
+        text-align: justify;
+        font-size: 15px;
+        width: auto;
+        height: auto;
+        padding-right: 25px;
+        padding-left: 35px;
+        border-radius: 15px;
+    }
+    
+    
+
 
 
 }
@@ -258,6 +619,45 @@
                     align-content: center;
                     align-items: center;
                 }
+
+                #imgheaderbio {
+                    width: auto;
+                    height: 40vh;
+                    margin:30px;
+                    border-radius: 70% 20% 100%;
+                    border: 2px solid rgb(0, 99, 0);
+                    transition: all 1s ;
+                }
+                #imgheaderbio:hover {
+                    background: #3f85a1;
+                    border-color: #02b337 !important;
+                     box-shadow: inset 0 0 20px rgba(45, 113, 139, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+                outline-color: rgba(49, 138, 172, 0);
+                outline-offset: 80px;
+                }
+                #imgheaderbio {
+                    mask-image: linear-gradient( #1f2937 40%, transparent );
+                    transition:all .5s ease-in-out;
+                }
+
+                #imgtutor {
+                    width: auto;
+                    height: 230px;
+                    margin:3px;
+                    border-radius: 10px;
+                    margin-bottom: 10px;
+                    border: 1px solid;
+                    margin-bottom: 10px;
+                    margin-top: 20px;
+                }
+                #imgtutor:hover{
+                    transition:all .5s ease-in-out;
+                    -webkit-border-radius:100%;
+                   
+                    transform: rotate(360deg);
+                    -webkit-transform: rotate(360deg);
+                 }
+
                 
                 iframe {
                     height: 80vh;
@@ -270,6 +670,55 @@
                 .headertexto {
                 
                 }
+                .tutoapp
+                {
+                    display: flex;
+                    flex-direction: column;
+                    width: auto;
+                    padding: 20px;
+
+                }
+                .tutoapp button {
+                    padding: 10px;
+                }
+
+
+                div.botonhe {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    align-content: center;
+                }
+                .botonheader, .botonheader a {
+                    font-size: 2.1vh;
+                    align-content: center;
+                    border: 1px solid #1F2937;
+                    border-radius: 4px 1px;
+                    padding: 3px;
+                    margin: 5px ; 
+                }
+    
+                .botonheader:hover{
+                    border-radius: 0.5em 1.2em;
+                    background: #008ac0;
+                    color: #fff !important;
+                    box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+                outline-color: rgba(49, 138, 172, 0);
+                outline-offset: 40px;
+                text-shadow: 1px 1px 6px #fff;
+                } 
                 
+                .botonheader a:hover{
+                    border-radius: 0.5em 1.2em;
+                    background: #1F2937;
+                    color: #fff !important;
+                    box-shadow: inset 0 0 20px rgba(49, 138, 172, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+                outline-color: rgba(49, 138, 172, 0);
+                outline-offset: 40px;
+                text-shadow: 1px 1px 6px #fff;
+                }
+    
 
 }
