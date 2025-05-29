@@ -132,7 +132,7 @@
     }
 
     #imgheaderbio {
-        width: 60vw;
+        width: 50vw;
         height: auto;
         margin:10px;
         border-radius: 70% 20% 100%;
@@ -881,7 +881,7 @@ div.imgcv,
 
     #imgheaderbio {
         width: auto;
-        height: 40vh;
+        height: 80vh;
         margin:30px;
         border-radius: 70% 20% 100%;
         border: 2px solid rgb(0, 99, 0);

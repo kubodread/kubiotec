@@ -379,6 +379,9 @@
         background-color: #ebf2ff;
         padding: 10px;
     }
+    .contenido1 {
+        margin: -70px 0 0 0;
+    }
     .textocont2 {
         display: flex;
         flex-direction: column;
@@ -393,6 +396,23 @@
         text-align: justify;
         padding: 10px;
         width: 100%;
+    }
+    .figtkub {
+        
+        display: flex;
+        width: 60%;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 15px;
+        margin: 40px 10px 0 0 ;
+    
+}
+    .figtkub h4 {
+        background-color: #1f29377e;
+        width: 100%;
+
     }
 
     .textoconttuto img {
@@ -499,6 +519,22 @@
         .alineacionmovil {
             scale: 70%;
         }
+
+        .titulomin {
+            /* background: linear-gradient(0deg, rgb(72, 95, 73) 0%, rgba(73, 113, 170, 0.384) 60%); */
+            background: #1f2937;
+            color: #e5e7eb;
+            font-size: 5vw;
+            padding: 5px;
+            display: flex;
+            width: 900%;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+
     /* aquí carrusel */
     
     .inicio-carrusel-contenedor {
@@ -535,10 +571,33 @@
         padding-left: 35px;
         border-radius: 15px;
     }
-    
-    
 
+    .figtkubimg {
+        display: flex;
+        width: 310px;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightgray;
+        border-radius: 15px;
+}
 
+    img.figtkubimg:hover {
+        filter: saturate(180%);
+    }
+
+    img.figtkubimg::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        position: absolute;
+        background: inherit;
+        filter: blur(80px)
+        saturate(400%);
+    
+    }
 
 }
 
@@ -634,11 +693,10 @@
                     align-content: center;
                     align-items: center;
                 }
-
                 #imgheaderbio {
-                    width: auto;
-                    height: 40vh;
-                    margin:30px;
+                    width: 100%;
+                    height: auto;
+                    margin:10px;
                     border-radius: 70% 20% 100%;
                     border: 2px solid rgb(0, 99, 0);
                     transition: all 1s ;
@@ -650,9 +708,13 @@
                 outline-color: rgba(49, 138, 172, 0);
                 outline-offset: 80px;
                 }
-                #imgheaderbio {
-                    mask-image: linear-gradient( #1f2937 40%, transparent );
-                    transition:all .5s ease-in-out;
+            
+                #imgheaderbio:hover {
+                    background: #3f85a1;
+                    border-color: #02b337 !important;
+                     box-shadow: inset 0 0 20px rgba(45, 113, 139, 0.5), 0 0 20px rgba(49, 138, 172, 0.4);
+                outline-color: rgba(49, 138, 172, 0);
+                outline-offset: 80px;
                 }
 
                 #imgtutor {
@@ -787,4 +849,53 @@
 
             }
             
+    .figtkubimg {
+        display: flex;
+        width: 70vh;
+        height: auto;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightgray;
+        border-radius: 15px;
+}
+
+    img.figtkubimg:hover {
+        filter: saturate(180%);
+    }
+
+    img.figtkubimg::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        inset: 0;
+        position: absolute;
+        background: inherit;
+        filter: blur(80px)
+        saturate(400%);
+    
+    }
+
+
+
+.figtkub {
+    
+    display: flex;
+    width: 60%;
+    height: auto;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    margin: 40px 10px 0 0 ;
+
+}
+.figtkub h4 {
+    background-color: #1f29377e;
+    width: 100%;
+
+}
+.contenido1 {
+    margin: -70px 0 0 0 ;
+}
 }
