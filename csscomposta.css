@@ -114,3 +114,7 @@ text-shadow: 1px 1px 6px #fff;
 iframe {
     height: 80vh;
 }
+
+.iframestyle {
+    display: flex; width: 100%;
+}
