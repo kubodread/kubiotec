@@ -1,11 +1,16 @@
 const CACHE_NAME = 'my-pwa-cache-v1';
 const urlsToCache = [
-    '',
+    './',
     './compostaje.html',
+    './productos.html'
     './csscomposta.css',
     './app.js',
     './manifest.json',
     './preload.js',
+    './tiendas.html',
+    './tutoriales.html',
+    './tutorial/',
+    './productos/',
     './images/icon-192x192.png',
     './images/icon-512x512.png'
     // 'https://composta-control.vercel.app/'
