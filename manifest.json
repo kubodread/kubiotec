@@ -1,6 +1,6 @@
 {
-  "name": "Controlador de Composta",
-  "short_name": "CompostaCtrl",
+  "name": "Controlador de Composta JFKH",
+  "short_name": "CompostaCtrlK",
   "description": "Gestiona y optimiza tus pilas de composta con Controlador de Composta por Kubiotec.",
   "start_url": "./compostaje.html",
   "display": "standalone",
