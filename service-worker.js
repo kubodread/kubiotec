@@ -12,8 +12,8 @@ const urlsToCache = [
     './tutoriales.html',
     './tutorial/',
     './images/icon-192x192.png',
-    './images/icon-512x512.png'
-    // 'https://composta-control.vercel.app/'
+    './images/icon-512x512.png',
+    'https://composta-control.vercel.app/'
     // No se recomienda cachear la URL del iframe aquí
     // ya que el service worker del iframe se encargará de su propio caché.
 ];
