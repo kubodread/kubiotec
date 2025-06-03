@@ -672,7 +672,7 @@ div.imgcv,
     #load::after{
         width: 85%;
         height: 85%;
-        background-color: #1F2937;
+        background-color: #1f293770;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
