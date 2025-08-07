@@ -1,5 +1,5 @@
 <script>
-    fetch('noticiasbarra/noticias.html')
+    fetch('../noticiasbarra/noticias.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('noticiashoy').innerHTML = data;

@@ -43,7 +43,7 @@ function addElement() {
 // const tutorialesDiv = document.querySelector('.tutoriales'); // Asegúrate de que este div exista en tu index.html
 
 function cargarTutorial(id) {
-    fetch(`tutorial/${id}.html`)
+    fetch(`../tutorial/${id}.html`)
         .then(response => response.text())
         .then(data => {
             if (tutorialesDiv) {

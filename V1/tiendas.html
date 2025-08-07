@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kubiotec ::::: Productos agroecológicos</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="../jscss/style.css">
+    <link rel="icon" href="../images/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
@@ -17,14 +17,14 @@
       <!-- fin carga -->
     <div class="barratop">
          <div class="logoytext">
-            <div class="logotextomovil">  <a href="index.html">
-                <img id="logo" src="images/logokubiotec.png" alt="Logo de Kubiotec">
-                </a><a href="index.html"><p class="logotext">Kubiotec</p></a>
+            <div class="logotextomovil">  <a href="../index.html">
+                <img id="logo" src="../images/logokubiotec.png" alt="Logo de Kubiotec">
+                </a><a href="../index.html"><p class="logotext">Kubiotec</p></a>
             </div>
         <ul class="ultop">
-            <li class="litop"><a class="ultop" href="Productos.html">Productos</a></li>
-            <li class="litop"><a class="ultop" href="tutoriales.html">Tutoriales</a></li>
-            <li class="litop"><a class="ultop" href="kubiotecMX.html">Servicios</a></li>
+            <li class="litop"><a class="ultop" href="../V1/Productos.html">Productos</a></li>
+            <li class="litop"><a class="ultop" href="../V1/tutoriales.html">Tutoriales</a></li>
+            <li class="litop"><a class="ultop" href="../V1/kubiotecMX.html">Servicios</a></li>
         </ul></div>
     </div>
     <div class="headergeneral">
@@ -95,21 +95,21 @@
             </p>
             <div id="menuheader"></div>    
             <script>
-                fetch('menu.html')
+                fetch('../menus/menu.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('menuheader').innerHTML = data;
                     });
             </script>
         </div>
-        <img id="imgheaderbio" src="images/manostierra.jpeg" alt="enlaces">
+        <img id="imgheaderbio" src="../images/manostierra.jpeg" alt="enlaces">
     </div>
     <div class="contenido1">
         <h1 class="titulocarru"> Red de Colaboradores Kubiotec</h1>
         
         <div id="kubyhe"></div>    
         <script>
-            fetch('imgpag/kubyhe.html')
+            fetch('../imgpag/kubyhe.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('kubyhe').innerHTML = data;
@@ -121,7 +121,7 @@
        <!--  paginas html amigo balvina  -->
             <div id="balvina"></div>    
             <script>
-                fetch('imgpag/balvina.html')
+                fetch('../imgpag/balvina.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('balvina').innerHTML = data;
@@ -131,7 +131,7 @@
        <!--  paginas html para incluir amigos  -->
        <div id="redaccionaca"></div>    
        <script>
-           fetch('imgpag/redaccion.html')
+           fetch('../imgpag/redaccion.html')
                .then(response => response.text())
                .then(data => {
                    document.getElementById('redaccionaca').innerHTML = data;
@@ -142,7 +142,7 @@
         <!--  paginas html para incluir amigos  -->
         <div id="imega"></div>    
         <script>
-            fetch('imgpag/imega.html')
+            fetch('../imgpag/imega.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('imega').innerHTML = data;
@@ -154,7 +154,7 @@
 <!--  paginas html para incluir amigos  -->
         <div id="amigos3"></div>    
         <script>
-            fetch('imgpag/amigos3.html')
+            fetch('../imgpag/amigos3.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('amigos3').innerHTML = data;
@@ -172,7 +172,7 @@
         </div>
     </div>
     <div class="contenidofin">
-        <img id="imgfin" src="images/kubobal.jpg" alt="aplicación de Bacterias ácido lácticas en PTAR">
+        <img id="imgfin" src="../images/kubobal.jpg" alt="aplicación de Bacterias ácido lácticas en PTAR">
         <div class="cuadrofinproductos">
             <div class="textcuadro">
                 <p class="pc1">Brindamos asesorías ambientales en  normativas técnicas y legales. </p>
@@ -187,7 +187,7 @@
             <p class="textfoot"> Copyright c Kubiotec by The Odin Project 2025</p>
         </div>
     </footer>
-    <script src="./index.js"></script>
+    <script src="./jscss/index.js"></script>
 
 </body>
 </html>

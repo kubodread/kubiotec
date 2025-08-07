@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); // Evita la navegación del enlace
 
             // Realiza la petición para obtener el contenido de productoinfobal.html
-            fetch('productos/productoinfobal.html')
+            fetch('../productos/productoinfobal.html')
                 .then(response => response.text())
                 .then(data => {
                     // Inserta el contenido en el div productoinfo
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); // Evita la navegación del enlace
 
             // Realiza la petición para obtener el contenido de productoinfoultrabal.html
-            fetch('productos/productoinfoultrabal.html')
+            fetch('../productos/productoinfoultrabal.html')
                 .then(response => response.text())
                 .then(data => {
                     // Inserta el contenido en el div productoinfo
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); // Evita la navegación del enlace
 
             // Realiza la petición para obtener el contenido de productoinfosulfo.html
-            fetch('productos/sulfoinfo.html')
+            fetch('../productos/sulfoinfo.html')
                 .then(response => response.text())
                 .then(data => {
                     // Inserta el contenido en el div productoinfosulfo
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); // Evita la navegación del enlace
 
             // Realiza la petición para obtener el contenido de productoinfojabon.html
-            fetch('productos/productoinfojabon.html')
+            fetch('../productos/productoinfojabon.html')
                 .then(response => response.text())
                 .then(data => {
                     // Inserta el contenido en el div productoinfo
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); // Evita la navegación del enlace
 
             // Realiza la petición para obtener el contenido de productoinfojabon.html
-            fetch('productos/diato.html')
+            fetch('../productos/diato.html')
                 .then(response => response.text())
                 .then(data => {
                     // Inserta el contenido en el div productodiato
@@ -182,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); // Evita la navegación del enlace
 
             // Realiza la petición para obtener el contenido de productoinfojabon.html
-            fetch('productos/mma.html')
+            fetch('../productos/mma.html')
                 .then(response => response.text())
                 .then(data => {
                     // Inserta el contenido en el div productomma
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault(); // Evita la navegación del enlace
 
             // Realiza la petición para obtener el contenido de productoinfojabon.html
-            fetch('productos/multi.html')
+            fetch('../productos/multi.html')
                 .then(response => response.text())
                 .then(data => {
                     // Inserta el contenido en el div productomulti

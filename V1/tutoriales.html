@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kubiotec ::::: Tutoriales agroecológicos</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="../jscss/style.css">
+    <link rel="icon" href="../images/favicon.ico">
 
 </head>
 <body>
@@ -16,14 +16,14 @@
       <!-- fin carga -->
     <div class="barratop">
          <div class="logoytext">
-            <div class="logotextomovil">  <a href="index.html">
-                <img id="logo" src="images/logokubiotec.png" alt="Logo de Kubiotec">
-                </a><a href="index.html"><p class="logotext">Kubiotec</p></a>
+            <div class="logotextomovil">  <a href="../index.html">
+                <img id="logo" src="../images/logokubiotec.png" alt="Logo de Kubiotec">
+                </a><a href="../index.html"><p class="logotext">Kubiotec</p></a>
             </div>
         <ul class="ultop">
-            <li class="litop"><a class="ultop" href="Productos.html">Productos</a></li>
-            <li class="litop"><a class="ultop" href="tutoriales.html">Tutoriales</a></li>
-            <li class="litop"><a class="ultop" href="kubiotecMX.html">Servicios</a></li>
+            <li class="litop"><a class="ultop" href="../V1/Productos.html">Productos</a></li>
+            <li class="litop"><a class="ultop" href="../V1/tutoriales.html">Tutoriales</a></li>
+            <li class="litop"><a class="ultop" href="../V1/kubiotecMX.html">Servicios</a></li>
         </ul></div>
     </div>
     <div class="headergeneral">
@@ -36,7 +36,7 @@
             </p>
             <div id="menuheader"></div>    
             <script>
-                fetch('menu.html')
+                fetch('../menus/menu.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('menuheader').innerHTML = data;
@@ -44,7 +44,7 @@
             </script>
         </div>
             <div class="contenedor">
-        <img id="imgheaderbio" src="images/preparacion.jpg" alt="Preparando agroecológicos">
+        <img id="imgheaderbio" src="../images/preparacion.jpg" alt="Preparando agroecológicos">
             </div>
     </div>
     <div class="contenido1">
@@ -66,7 +66,7 @@
                 </div>
         </header>  
        <script>
-            fetch('tutorialeslista.html')
+            fetch('../menus/tutorialeslista.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('contenedor-botones').innerHTML = data;
@@ -85,13 +85,13 @@
     <div class="contenido2">
         <div class="textocont2">
             <p class="p1">
-                🌳 Desde frutales hasta orquídeas,<a class="linkultra" href="./Productos.html"> Ultrabal </a>se adapta a las necesidades de cada tipo de planta. 💧 Con una dilución sencilla, proporciona los nutrientes clave (N, P, K, ácidos húmicos y fúlvicos) para un desarrollo óptimo. ¡Consulta nuestras dosis! #AbonoOrgánico #NutrientesParaPlantas #CultivoSaludable #Ultrabal   
+                🌳 Desde frutales hasta orquídeas,<a class="linkultra" href="./V1/Productos.html"> Ultrabal </a>se adapta a las necesidades de cada tipo de planta. 💧 Con una dilución sencilla, proporciona los nutrientes clave (N, P, K, ácidos húmicos y fúlvicos) para un desarrollo óptimo. ¡Consulta nuestras dosis! #AbonoOrgánico #NutrientesParaPlantas #CultivoSaludable #Ultrabal   
             </p>
             <p class="p2">-Biólogo José Félix Kubota Hernández - Asesor Ambiental. </p>
         </div>
     </div>
     <div class="contenidofin">
-        <img id="imgfin" src="images/kubobal.jpg" alt="aplicación de Bacterias ácido lácticas en PTAR">
+        <img id="imgfin" src="../images/kubobal.jpg" alt="aplicación de Bacterias ácido lácticas en PTAR">
         <div class="cuadrofinproductos">
             <div class="textcuadro">
                 <p class="pc1">Brindamos asesorías ambientales en  normativas técnicas y legales. </p>
@@ -107,7 +107,7 @@
         </div>
     </footer>
 
-    <script src="scriptuto.js"></script>
-    <script src="./index.js"></script>
+    <script src="../jscss/scriptuto.js"></script>
+    <script src="./jscss/index.js"></script>
 </body>
 </html>

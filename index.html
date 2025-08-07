@@ -12,9 +12,9 @@
     <meta name="title" content="Kubiotec - Biosoluciones - Asesoría Ambiental">
 
     <title>Kubiotec :::::: Bio Soluciones </title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./jscss/style.css">
     <link rel="icon" href="images/favicon.ico">
-    <script src="carrusel.js"></script>
+    <script src="./jscss/carrusel.js"></script>
     <meta name="google-site-verification" content="woPq5xwkN49obY91QVLGEVa2nRRjrpQ_mHZWVETihxA" />
 </head>
 <body>
@@ -30,9 +30,9 @@
                 </a> <a href="index.html"><p class="logotext">Kubiotec</p> </a>
             </div>
         <ul class="ultop">
-            <li class="litop"><a class="ultop" href="Productos.html">Productos</a></li>
-            <li class="litop"><a class="ultop" href="tutoriales.html">Tutoriales</a></li>
-            <li class="litop"><a class="ultop" href="kubiotecMX.html">Servicios</a></li>
+            <li class="litop"><a class="ultop" href="V1/Productos.html">Productos</a></li>
+            <li class="litop"><a class="ultop" href="V1/tutoriales.html">Tutoriales</a></li>
+            <li class="litop"><a class="ultop" href="V1/kubiotecMX.html">Servicios</a></li>
         </ul></div>
     </div>
     <div class="headergeneral">
@@ -44,7 +44,7 @@
                 <!-- menu contenido header -->
                 <div id="menuheader"></div>    
                 <script>
-                    fetch('menu.html')
+                    fetch('menus/menu.html')
                         .then(response => response.text())
                         .then(data => {
                             document.getElementById('menuheader').innerHTML = data;
@@ -93,7 +93,7 @@
             
         </div>
         <script>
-            fetch('inicio.html')
+            fetch('menus/inicio.html')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('inicio').innerHTML = data;
@@ -104,7 +104,7 @@
 
         <!-- amigos kubiotec sección -->
             <script>
-                fetch('inicio2.html')
+                fetch('menus/inicio2.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('inicio2').innerHTML = data;
@@ -166,7 +166,7 @@
         </div>
     </footer>
     
-    <script src="./index.js"></script>
+    <script src="./jscss/index.js"></script>
 
 </body>
 </html>
