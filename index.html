@@ -38,9 +38,13 @@
     <div class="headergeneral">
         <div class="headertexto">
             <h1>Asesoría ambiental</h1>
-            <p>Ponemos a tu disposición productos agroecológicos para la salud del suelo y las plantas. <br> 
-                Tanto para nutrir de forma saludable, como también combatir plagas sin afectar el ambiente. <br>
-                Promovemos el uso de microorganismos benéficos como alternativa para solucionar problemas ambientales</p>
+            <article><p>Comprometido en
+          encontrar soluciones adecuadas, innovadoras y eficientes, cumpliendo con 
+          las normas para cuidar y proteger nuestro planeta.
+          <i> <br>
+            ¡Trabajemos juntos para crear un futuro más verde y
+          sostenible!
+          </i> </p></article>
                 <!-- menu contenido header -->
                 <div id="menuheader"></div>    
                 <script>
@@ -50,25 +54,23 @@
                             document.getElementById('menuheader').innerHTML = data;
                         });
                 </script>
-
+               
         </div>
         <div class="efeimgheader"></div>
         <img id="imgheader" src="images/lombrizfeliz.jpeg" alt="Lombriz feliz, imagen generada con Bing IA">
     </div>
 <br>
+
+
+
+
 <!-- noticias y actividades sección -->
-    <div id="principaln">
+    <div id="contenido1">
         <div class="barranotis">
-            <div id="noticiasbarra"></div> 
+            <div id=""></div> 
             <div id="inicio2"></div>
         </div>    
-        <script>
-            fetch('noticiasbarra/noticias.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('noticiasbarra').innerHTML = data;
-                });
-        </script>
+ 
         
    
 
@@ -108,13 +110,49 @@
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('inicio2').innerHTML = data;
-                        inicializarCarrusel();
                     });
             </script>
 
             
     </div>
 
+        <div class="elem1">
+            <div class="">
+                <article>
+                    <h1>
+                       &#128198; &#128209; Monitorea tu composta con esta app 	&#128200;&#128201;&#128202;
+                    </h1>
+                </article>
+            </div>
+
+                <button class="botonheader" id='openModal'>Conocer más sobre la app </button>
+
+            <div id='modal' class='modal'>
+            <div class='modal-content'>
+                <span class='close'>×</span>
+                <article><h2>Controla el progreso de tu composta</h2>
+                <i>Con esta app puedes registrar y monitorear diariamente o visualizar datos que tengas.</i> <br>
+                <i>Puedes importar y exportar archivos CSV para visualizar o procesar los datos</i>
+                Mira las siguientes capturas de pantalla de la aplicación. <br>
+                </article>
+                    <div id="noti"></div> 
+                    <article>
+                     <br> <h4>Se puede usar desde cualquier dispositivo con navegador 	&#128242;</h4>
+                     <h4>Conoce la app web 
+                        <br>
+                        <a class="botonheader" href="compostaje.html">AppComposta</a>
+                    </h4>
+
+                    </article>
+            </div>
+            </div>
+
+
+            
+        </div>   
+        <script>
+            inserpag("noticiasbarra/noti.html","noti");
+        </script>
     <div class="contenido1">
         
 
@@ -166,7 +204,11 @@
         </div>
     </footer>
     
-    <script src="./jscss/index.js"></script>
+
+
+    <script src="jscss/index.js"></script>
+        <script src="jscss/galeria.js"></script>
+
 
 </body>
 </html>

@@ -2458,7 +2458,20 @@ div.figt img:hover {
     align-items:center;
     transform:translate(-50%,-50% ) ;
 }
-
+#productoinfolomb{
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 850px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    justify-content:center;
+    align-items:center;
+    transform:translate(-50%,-50% ) ;
+}
 #productoinfosulfo {
     
     position: fixed;
@@ -2887,7 +2900,15 @@ li.tutolista{
 
 /*  fin taller diato */
 
+.rowinicio {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
 
 
+}
 
+.iconnoti{
+    font-size: 25px;
 }

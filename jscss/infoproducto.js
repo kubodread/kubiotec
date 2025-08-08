@@ -1,4 +1,41 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const botonesVerMas = document.querySelectorAll('.cuadrofinbproductoslomb');
+    const productoinfolombDiv = document.getElementById('productoinfolomb');
+
+    botonesVerMas.forEach(boton => {
+        boton.addEventListener('click', function(event) {
+            event.preventDefault(); // Evita la navegación del enlace
+
+            // Realiza la petición para obtener el contenido de productoinfolomb.html
+            fetch('../productos/lomb.html')
+                .then(response => response.text())
+                .then(data => {
+                    // Inserta el contenido en el div productoinfo
+                    productoinfolombDiv.innerHTML = data;
+                    productoinfolombDiv.style.display ='flex';
+                    // Agrega los event listeners para los botones de cerrar
+                    const cerrarModalButtons = document.querySelectorAll('.info-close-button, .infocerrar');
+                    cerrarModalButtons.forEach(cerrarBoton => {
+                        cerrarBoton.addEventListener('click', function() {
+                            productoinfolombDiv.style.display ='none';
+                            productoinfolombDiv.innerHTML = ''; // Limpia el contenido del div para cerrar
+                        });
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al cargar productoinfolomb.html:', error);
+                    productoinfolombDiv.innerHTML = '<p>Error al cargar la información del producto.</p>';
+                    productoinfolombDiv.style.display ='block';
+                });
+        });
+    });
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
     const botonesVerMas = document.querySelectorAll('.cuadrofinbproductosbal');
     const productoinfobalDiv = document.getElementById('productoinfobal');
 

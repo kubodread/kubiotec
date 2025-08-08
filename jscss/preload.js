@@ -7,3 +7,13 @@ window.onload = function () {
     
  };
  
+function inserpag(pag,clase) { 
+        return    ( 
+          fetch(pag)
+             .then(response => response.text())
+             .then(data => {
+             document.getElementById(clase).innerHTML = data;
+                        })
+                      )
+                    }
+
