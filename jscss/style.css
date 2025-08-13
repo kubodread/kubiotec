@@ -35,6 +35,7 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        width: fit-content;
         height: 110px;
         position: fixed;
         border-radius: 10px;
@@ -220,8 +221,6 @@
     a {
         text-decoration: none;
         color:#e5e7eb;
-        font-size: 18px;
-
     }
 
     .headergeneral {
@@ -392,8 +391,29 @@
         flex-wrap: wrap;
         flex-direction: column;
         align-content: center;
-        width: auto;
+        width: fit-content;
     }
+        #contenido1 {
+        display: flex;
+        padding-top: 7px;
+        padding-bottom: 15px;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+        width: fit-content;
+    }
+
+    .iniciospag {
+        width: fit-content;
+    }
+    article{
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        }
+
 .tutoriales{
     width: auto;
 }
@@ -403,7 +423,7 @@
         background: linear-gradient(0deg, #3882f6 0%, rgba(31,41,55,1) 60%);
         margin-bottom: 3px;
         color: #e5e7eb;
-        font-size: 30px;
+        font-size: 1em;
         font-weight: 900;
         text-align: center;
         border: 1px solid rgb(87, 87, 87);
@@ -422,12 +442,12 @@
 .inicio-carrusel-contenedor {
     display: flex;
     overflow-x: hidden; /* Oculta la barra de desplazamiento */
-    width: 400px; /* Asegura que el contenedor ocupe todo el ancho */
+    width: 300px; /* Asegura que el contenedor ocupe todo el ancho */
     height: auto;
   }
   
   .iniciocosascarrusel {
-    flex: 0 0 100%; /* Cada elemento ocupa el 100% del ancho */
+    flex: 0 0 90%; /* Cada elemento ocupa el 100% del ancho */
     display: flex;
   }
 #anterior, #siguiente {
@@ -436,11 +456,12 @@
 .botonescarrusel {
     display: flex;
     flex-direction: column;
+    width: fit-content;
 }
 
 img.lombriprocarrusel{
-    width: auto;
-    height: 300px;
+    width: 300px;
+    height: auto;
     border-radius: 10px;
 }
 .textfproductoslombcar {
