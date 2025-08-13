@@ -773,7 +773,6 @@ margin: 10px;
 }
 
 .documento {
-margin: 0 10%;
 display: flex;
 width: 20em;
 justify-content: center;
@@ -1749,7 +1748,7 @@ flex-wrap: wrap;
         position:relative;
         color:#0000003b;
         box-sizing: content-box;
-        display: none;
+        display: flex;
         width: 90%;
         z-index: 10000;
     }
