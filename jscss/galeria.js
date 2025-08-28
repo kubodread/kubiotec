@@ -19,9 +19,9 @@ const alts = {
 }
 
 /* Looping through images */
-
+let newImage;
 for (const image of images) {
-  const newImage = document.createElement('img');
+   newImage = document.createElement('img');
   newImage.setAttribute('src', `imagenappcom/${image}`);
   newImage.setAttribute('alt', alts[image]);
   thumbBar.appendChild(newImage);

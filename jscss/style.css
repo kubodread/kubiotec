@@ -2933,3 +2933,15 @@ li.tutolista{
 .iconnoti{
     font-size: 25px;
 }
+
+.imgFiesta {
+    width: 22em;
+    height: auto;
+}
+
+.fiestadiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px #002f75;
+}

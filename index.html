@@ -24,6 +24,7 @@
       </div>
       <!-- fin carga -->
     <div class="barratop">
+        
          <div class="logoytext">
             <div class="logotextomovil"><a href="index.html">
                 <img id="logo" src="images/logokubiotec.png" alt="Logo de Kubiotec">
@@ -67,12 +68,10 @@
 <!-- noticias y actividades sección -->
     <div id="contenido1">
         <div class="barranotis">
-            <div id=""></div> 
+            <div id="fiesta"></div> 
             <div id="inicio2"></div>
         </div>    
- 
-        
-   
+
 
         <!-- productos y servisios -->
         <div class="iniciospag">
@@ -103,16 +102,16 @@
                     document.getElementById('inicio').innerHTML = data;
                     inicializarCarrusel();
                 });
-        </script>
-        
 
-        <!-- amigos kubiotec sección -->
-            <script>
+    /*amigos kubiotec sección -->*/
+
                 fetch('menus/inicio2.html')
                     .then(response => response.text())
                     .then(data => {
                         document.getElementById('inicio2').innerHTML = data;
                     });
+
+             inserpag("noticiasbarra/paqfiesta.html","fiesta");       
             </script>
 
             
